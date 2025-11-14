@@ -1937,7 +1937,7 @@ margin-bottom: 40px;
 .philosophy {
   width: 100%;
   padding: 140px 12%;
-  background: url("../media/philosophy-background.png") center center / cover no-repeat;
+  background: url("media/philosophy-background.png") center center / cover no-repeat;
   background-attachment: fixed; /* optional premium parallax look */
   color: #fff;
   text-align: center;
@@ -2500,3 +2500,4 @@ width: 500px;
   }
   .services-sep { display: none; }
 }
+
