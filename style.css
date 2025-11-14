@@ -71,8 +71,8 @@ button.center{
 }
 #scrollTopBtn {
   display: none;
-};
-@media (max-width:600px) {
+}
+@media (max-width:900px) {
   
 
 #scrollTopBtn {
@@ -403,7 +403,31 @@ header.scrolled {
  .secondary-nav a:hover {
  color: black;
  }
-
+@media (max-width:900px) {
+  .footer-locations {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .footer-info .logo{
+    margin-left: -90px;
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
+  .location-col{
+    margin-right: 0px;
+  }
+  .location-col h3{
+    font-weight: 400;
+    font-size: 12px;;
+    margin-top: 5px;
+  }
+  .location-col p, .location-col a{
+    font-size: 8px;
+  } 
+   .newsletter p {
+    margin-top: 10px;
+   }
+}
 
 /* COPYRIGHT - same treatment as footer */
 .copyright {
@@ -2454,7 +2478,7 @@ width: 500px;
   }
   .services-right p, .services-right li{
     font-size: 18px;
-    width: 10%;
+    width: 100%;
   }
 }
 /* small screen: stack layout, disable sticky behavior */
