@@ -69,7 +69,9 @@ button.center{
   display: block;
   margin: 20px auto;
 }
-
+#scrollTopBtn{
+  display: none;
+}
 @media (max-width:900px) {
 #scrollTopBtn {
   position: fixed;
