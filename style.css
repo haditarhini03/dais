@@ -1927,21 +1927,17 @@ margin-bottom: 40px;
   min-height: 100vh;           /* ensures full-screen on desktop */
 }
 
-/* Full-height video background */
 .about-hero video {
-<<<<<<< HEAD
-  margin-top: -50px;
-=======
   position: absolute;
   top: 50%;                    /* center vertically */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
->>>>>>> 7120177108412b06280ccfcc8c6ab5a344d74976
   object-fit: cover;
-  z-index: -2;
+  z-index: -1;
 }
+
 
 /* Text content */
 .about-hero h1,
@@ -2085,7 +2081,7 @@ margin-bottom: 40px;
 .philosophy {
   width: 100%;
   padding: 140px 12%;
-  background: url("../media/philosophy-background.png") center center / cover no-repeat;
+  background: url("media/philosophy-background.png") center center / cover no-repeat;
   background-attachment: fixed; /* optional premium parallax look */
   color: #fff;
   text-align: center;
@@ -2634,3 +2630,4 @@ width: 500px;
   }
   .services-sep { display: none; }
 }
+
