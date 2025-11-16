@@ -69,10 +69,8 @@ button.center{
   display: block;
   margin: 20px auto;
 }
-#scrollTopBtn {
-  display: none;
-}
-@media (max-width:900px) {
+
+@media (max-width:600px) {
   
 
 #scrollTopBtn {
@@ -281,21 +279,21 @@ header.scrolled {
 
 
 
-/* ========== FOOTER ========== */
-/* FOOTER BASE - ensure background image sits under all content */
+/* ============================================
+   FOOTER BASE
+============================================ */
 .footer {
   position: relative;
-  padding: 20px 50px 0px;
+  padding: 20px 50px 0;
   color: white;
   font-family: 'Cambria Math', serif;
   overflow: hidden;
 }
 
-
-/* background image placed absolutely and behind content */
+/* Background image behind content */
 .footer-background {
   position: absolute;
-  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -303,131 +301,220 @@ header.scrolled {
   pointer-events: none;
 }
 
-.footer-info .logo{
- width: 300px;
- height: auto;
- margin-left: -95px;
- margin-top: -50px;
+/* ============================================
+   LOGO
+============================================ */
+.footer-info .logo {
+  width: 300px;
+  height: auto;
+  margin-left: -95px;
+  margin-top: -50px;
   margin-bottom: -50px;
-
 }
 
+/* ============================================
+   LOCATIONS GRID
+============================================ */
 .footer-locations {
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 1fr));
   gap: 0px;
   color: white;
-  z-index: 1;
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
 }
-.location-col{
+
+.location-col {
   margin-right: 100px;
 }
+
 .footer-locations h3 {
   font-size: 20px;
   margin-bottom: 12px;
   margin-top: 25px;
 }
-.footer-locations p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-  text-align: left;
 
-}
+.footer-locations p,
 .footer-locations a {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
-  color: white;
   text-align: left;
+  color: white;
 }
-.newsletter, .newsletter p, .newsletter-form {
- text-align: left;
- justify-content: flex-start;
- align-items: flex-start;
- }
- .newsletter p {
- margin-bottom: 12px;
- font-weight: 200;
- font-size: 16px;
- margin-left: 0px;
- }
- .newsletter-form {
- display: flex;
- flex-wrap: wrap;
- gap: 10px;
- }
- .newsletter-form input {
- width: 270px;
- padding: 12px 14px;
- border: 2px solid var(--blue);
- border-radius: 25px;
- font-size: 15px;
- outline: none;
- }
- .newsletter-form input:focus {
- border-color: black;
- box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
- }
 
- /* BOTTOM NAV */ 
- .footer-bottom {
- padding-top: 20px;
- display: flex;
- justify-content: center;
- }
- .secondary-nav {
- list-style: none;
- display: flex;
- gap: 15px;
- padding: 10px;
- margin: 0;
- flex-wrap: wrap;
- }
- .secondary-nav a::after {
- content: "|";
- margin-left: 10px;
- }
- .secondary-nav a:last-child::after {
- content: "";
- }
- .secondary-nav a {
- text-decoration: none;
- color: white;
- font-size: 13px;
- transition: color 0.3s ease;
- }
- .secondary-nav a:hover {
- color: black;
- }
-@media (max-width:900px) {
+/* ============================================
+   NEWSLETTER
+============================================ */
+.newsletter,
+.newsletter p,
+.newsletter-form {
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.newsletter p {
+  margin-bottom: 12px;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  width: 270px;
+  padding: 12px 14px;
+  border: 2px solid var(--blue);
+  border-radius: 25px;
+  font-size: 15px;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: black;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+/* ============================================
+   BOTTOM NAV
+============================================ */
+.footer-bottom {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-nav {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.secondary-nav a::after {
+  content: "|";
+  margin-left: 10px;
+}
+
+.secondary-nav a:last-child::after {
+  content: "";
+}
+
+.secondary-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav a:hover {
+  color: black;
+}
+
+
+
+/* ============================================
+   MOBILE RESPONSIVE (TABLETS + PHONES)
+============================================ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer {
+    padding: 30px 30px 0;
+  }
+
+  .footer-info .logo {
+    width: 220px;
+    margin-left: 0;
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+
   .footer-locations {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
-    gap: 20px;
+    gap: 40px 20px;
   }
-  .footer-info .logo{
-    margin-left: -90px;
-    margin-top: -60px;
-    margin-bottom: -60px;
+
+  .location-col {
+    margin-right: 20px;
   }
-  .location-col{
-    margin-right: 0px;
+
+  .footer-locations h3 {
+    font-size: 18px;
   }
-  .location-col h3{
-    font-weight: 400;
-    font-size: 12px;;
-    margin-top: 5px;
+
+  .footer-locations p,
+  .footer-locations a {
+    font-size: 13px;
   }
-  .location-col p, .location-col a{
-    font-size: 8px;
-  } 
-   .newsletter p {
-    margin-top: 10px;
-   }
+
+  .newsletter p {
+    font-size: 14px;
+  }
+
+  .newsletter-form input {
+    width: 230px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
 }
+
+/* Phones */
+@media (max-width: 600px) {
+  .footer {
+    padding: 30px 20px 0;
+  }
+
+  .footer-info .logo {
+    width: 180px;
+    display: block;
+  }
+
+  .footer-locations {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 25px;
+  }
+
+  .location-col {
+    margin-right: 0;
+  }
+
+  .footer-locations h3 {
+    font-size: 16px;
+
+  }
+
+  .footer-locations p,
+  .footer-locations a {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .newsletter p {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .secondary-nav a {
+    font-size: 12px;
+  }
+}
+
 
 /* COPYRIGHT - same treatment as footer */
 .copyright {
@@ -458,7 +545,7 @@ header.scrolled {
   z-index: 1;
   padding: 5px;
   text-align: center;
-  left: 43%;
+  left: 50%;
   transform: translateX(-50%);
   width: fit-content;
 }
@@ -1825,67 +1912,104 @@ margin-bottom: 40px;
   }
 }
 
-/*=========About Page=============*/
-.about-hero{
-  height: 600px;
+/*====================================
+  ABOUT HERO
+====================================*/
+.about-hero {
+  position: relative;
+  width: 100%;
+  padding-top: 140px;          /* space under transparent header */
+  padding-bottom: 80px;        /* space below content */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;           /* ensures full-screen on desktop */
 }
+
+/* Full-height video background */
 .about-hero video {
+<<<<<<< HEAD
   margin-top: -50px;
+=======
+  position: absolute;
+  top: 50%;                    /* center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+>>>>>>> 7120177108412b06280ccfcc8c6ab5a344d74976
   object-fit: cover;
   z-index: -2;
 }
-.about-hero h1,p{
+
+/* Text content */
+.about-hero h1,
+.about-hero p {
   color: white;
-  width: 500px;
-  align-items: start;
-  text-align: center;
+  max-width: 500px;
   margin-left: 80px;
   z-index: 1;
 }
-.about-hero h1{
-  margin-top: 130px ;
-  margin-bottom: 50px;
+
+.about-hero h1 {
   font-weight: 700;
-  font-style: Bold;
   font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0%; 
-  text-align: center;
-}
-.about-hero p{
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  margin-bottom: 30px;
   text-align: left;
-  margin-bottom: 20px;
 }
 
-/* Mobile Responsive */
+.about-hero p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+
+/*====================================
+  RESPONSIVE
+====================================*/
 @media (max-width: 768px) {
   .about-hero {
-    height: auto;
-    min-height: 450px;
-    margin-bottom: -60px;
+    padding-top: 120px;         /* less header offset */
+    padding-bottom: 60px;
+    min-height: 100vh;          /* keep full height */
   }
 
   .about-hero video {
-    width: 100vw;   /* ensure it fits viewport width */
-    height: 100vh;  /* fill full height */
-    object-fit: cover;
+    height: 100%;               /* keep cover working on smaller screens */
+    width: 100%;
+  }
+
+  .about-hero h1,
+  .about-hero p {
+    margin-left: 0;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto 20px auto;
   }
 
   .about-hero h1 {
     font-size: 24px;
-    margin-top: 100px;
+    margin-bottom: 15px;
   }
 
-  
-  .about-hero h1,p{
-    margin-left: 0px;
-    text-align: center;
-    width: 90%;
+  .about-hero p {
+    font-size: 16px;
+  }
 }
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding-top: 110px;
+  }
+
+  .about-hero h1 {
+    font-size: 22px;
+  }
 }
 
 .sectors-section {
@@ -1961,7 +2085,7 @@ margin-bottom: 40px;
 .philosophy {
   width: 100%;
   padding: 140px 12%;
-  background: url("media/philosophy-background.png") center center / cover no-repeat;
+  background: url("../media/philosophy-background.png") center center / cover no-repeat;
   background-attachment: fixed; /* optional premium parallax look */
   color: #fff;
   text-align: center;
@@ -2148,21 +2272,7 @@ margin-bottom: 40px;
 /* Small screens (phones) */
 @media (max-width: 700px) {
   @media (max-width: 600px) {
-  .about-hero {
-    height: auto;
-    padding: 80px 5%;
-  }
-
-  .about-hero h1 {
-    font-size: 24px;
-    margin-top: 60px;
-  }
-
-  .about-hero p {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
+  
   .sectors-section {
     padding: 60px 5%;
   }
@@ -2476,7 +2586,7 @@ width: 500px;
   }
   .services-right p, .services-right li{
     font-size: 18px;
-    width: 100%;
+    width: 10%;
   }
 }
 /* small screen: stack layout, disable sticky behavior */
@@ -2524,4 +2634,3 @@ width: 500px;
   }
   .services-sep { display: none; }
 }
-
