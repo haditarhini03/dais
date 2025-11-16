@@ -59,6 +59,10 @@
                         and long-term impact for organizations and government entities.
                     </p>
                     <h3>Eng. Mohamad Tarhini</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div> 
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -69,6 +73,10 @@
                         secure financing, optimize development processes, and deliver high-impact projects.
                     </p>
                     <h3>Eng. Flávio Matos</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div>            
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -79,6 +87,10 @@
                           to achieve sustained business performance.
                     </p>
                     <h3>Mr. Rodrigo Oliveira</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div>          
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -89,6 +101,10 @@
                         and long-term impact for organizations and government entities.
                     </p>
                     <h3>Eng. Mohamad Tarhini</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div> 
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -99,6 +115,10 @@
                         secure financing, optimize development processes, and deliver high-impact projects.
                     </p>
                     <h3>Eng. Flávio Matos</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div>            
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -109,6 +129,10 @@
                           to achieve sustained business performance.
                     </p>
                     <h3>Mr. Rodrigo Oliveira</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div>
                                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -119,6 +143,10 @@
                         and long-term impact for organizations and government entities.
                     </p>
                     <h3>Eng. Mohamad Tarhini</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div> 
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -129,6 +157,10 @@
                         secure financing, optimize development processes, and deliver high-impact projects.
                     </p>
                     <h3>Eng. Flávio Matos</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div>            
                 <!-- Repeat photos as needed -->
                 <div class="team-member">
@@ -139,6 +171,10 @@
                           to achieve sustained business performance.
                     </p>
                     <h3>Mr. Rodrigo Oliveira</h3>
+                    <div class="indicator-dots">
+                        <span class="dot dot-img"></span>
+                        <span class="dot dot-desc"></span>
+                    </div>
                 </div>                     
             </div>
         </div>
@@ -264,5 +300,51 @@
             }
         });
     </script>
+    <script>
+        document.querySelectorAll(".team-member").forEach(member => {
+            
+            const img = member.querySelector("img");
+            const desc = member.querySelector("p");
+            const track = document.querySelector(".team-track");
+
+            const dotImg = member.querySelector(".dot-img");
+            const dotDesc = member.querySelector(".dot-desc");
+            dotImg.classList.add("active"); // default
+
+            let open = false;
+
+            member.addEventListener("click", () => {
+                open = !open;
+
+                if (open) {
+                    // show description
+                    img.style.opacity = "0.3";
+                    desc.style.opacity = "1";
+                    desc.style.visibility = "visible";
+
+                    // pause carousel
+                    track.style.animationPlayState = "paused";
+
+                    // dots
+                    dotImg.classList.remove("active");
+                    dotDesc.classList.add("active");
+
+                } else {
+                    // hide description
+                    img.style.opacity = "1";
+                    desc.style.opacity = "0";
+                    desc.style.visibility = "hidden";
+
+                    // resume carousel
+                    track.style.animationPlayState = "running";
+
+                    // dots
+                    dotDesc.classList.remove("active");
+                    dotImg.classList.add("active");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
