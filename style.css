@@ -565,6 +565,7 @@ header.scrolled {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+   background: black; 
 }
 
 .hero video {
@@ -1985,6 +1986,7 @@ margin-bottom: 40px;
   ABOUT HERO
 ====================================*/
 .about-hero {
+   background: black; 
   position: relative;
   width: 100%;
   padding-top: 140px;          /* space under transparent header */
