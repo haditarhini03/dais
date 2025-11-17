@@ -129,6 +129,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+    height: 90px;
+
   width: 100%;
   z-index: 100;
   padding: 20px 80px;
@@ -636,7 +638,7 @@ header.scrolled {
   align-items: center;
   width: max-content;        /* lets the track be as wide as needed */
   will-change: transform;
-  animation: scrollTrack 50s linear infinite;
+  animation: scrollTrack 80s linear infinite;
 }
 
 /* each item fixed size so animation is consistent */
@@ -1188,7 +1190,7 @@ header.scrolled {
 /* ========== TALK SECTION ========== */
 .talk {
   position: relative;
-  height: 330px;
+  height: 400px;
   overflow: hidden;
   text-align: center;
   color: white;
@@ -1205,7 +1207,8 @@ font-size: 36px;
 line-height: 1.60;
 letter-spacing: 0%;
 text-align: center;
-margin-bottom: 20px;
+margin-top: 50px;
+margin-bottom: 40px;
 
 }
 .talk p{
@@ -1533,14 +1536,13 @@ margin-bottom: 40px;
 }
 
 .project-card {
-  background: #d7d7d7;
+  background: #ececec;
   padding: 25px;
-  width: 600px;
-  margin: 0px 20px 0px 50px;
+  width: 90%;      /* let grid handle width */
+  margin: 0;        /* remove manual offsets */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.25s ease;
-  align-items: flex-start;
   text-align: left;
 }
 
@@ -1592,56 +1594,78 @@ margin-bottom: 40px;
 /* ---- GRID ---- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 25px;
-  margin: 20px 30px;
-  margin-bottom: 80px;
+  max-width: 1400px;
+  margin: 40px auto 80px auto;   /* ← equal left/right */
+  padding: 0 20px;               /* ← safe inner padding */
 }
 
-/* ---- RESPONSIVE ---- */
-@media (max-width: 1400px) {
+
+  @media (max-width: 1400px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 5px;
+    grid-template-columns: 1fr;
+    margin: 7%;
   }
-.project-card {
-    width: 350px;
-    margin: 0 0 10px 0;
-  }
-  .project-image img, .project-image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+
 }
-.project-text h3 {
-  font-size: 16px;
-  width: 250px;
+@media (max-width: 800px) {
+  .projects-grid {
+    margin: 2%;
+  }
+  .projects-hero h1 {
+    font-size: 28px;
+  }
+  .project-text h3 {
+  font-size: 13px;
+  max-width: 250px;
   font-weight: 500;
   color: #ff5c00;
-  margin-bottom: 4px;
-  line-height: 1.3;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.filter-btn {
+  padding: 5px 15px;
+  font-size: 12px;
+  border: 1px solid #aaa;
+  border-radius: 40px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+.project-card {
+  background: #ececec;
+  padding: 25px;
+}
 .project-text p {
   margin: 2px 0;
   color: black;
   font-size: 12px;
   text-align: left;
 }
-  /* Stack image above text on small screens if preferred */
-  .project-inner {
-    align-items: flex-start;
-  }
+.projects-grid {
+  display: grid;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 5px auto 4px auto;   /* ← equal left/right */
+  padding: 0 20px;               /* ← safe inner padding */
+}
+/* Circle Image */
+.project-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;          /* prevents squishing */
+  background: #ddd;
 }
 
-@media (max-width: 800px) {
-  .projects-grid {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0 5px;
-  }
-  .project-card{
-   margin: 0 auto;
-  } 
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 }
 
 /* CLIENTS SECTION */
@@ -1890,10 +1914,6 @@ margin-bottom: 40px;
   cursor: pointer;
 }
 
-/* Pause carousel on hover anywhere in the carousel */
-.team-carousel:hover .team-track {
-  animation-play-state: paused;
-}
 
 /* Sliding Animation */
 @keyframes slideTeam {
@@ -1983,6 +2003,65 @@ margin-bottom: 40px;
 .team-member p {
   z-index: 4;
 }
+/* ===========================
+       TEAM POPUP MODAL
+=========================== */
+#team-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.team-modal-content {
+  background: white;
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.team-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.team-modal-left img {
+  width: 260px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.team-modal-right h2 {
+  margin: 0 0 10px 0;
+  font-family: 'Oswald';
+  text-align: left;
+}
+
+.team-modal-right h4 {
+  margin: 0 0 20px 0;
+  color: #DC4405;
+  font-family: 'Oswald';
+}
+
+.team-modal-right p {
+  line-height: 1.6;
+  max-height: 300px;
+  overflow-y: auto;
+}
 
 
 /*====================================
@@ -2001,17 +2080,18 @@ margin-bottom: 40px;
   min-height: 100vh;           /* ensures full-screen on desktop */
 }
 
-/* Full-height video background */
 .about-hero video {
   position: absolute;
-  top: 50%;                    /* center vertically */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  top: 50%;
+  right: 0;              /* stick to the right */
+  transform: translateY(-50%);  
   height: 100%;
+  width: auto;           /* let width grow beyond the left side */
+  min-width: 100%;       /* ensure no empty space on the right */
   object-fit: cover;
-  z-index:0;
+  z-index: 0;
 }
+
 
 /* Text content */
 .about-hero h1,
@@ -2049,10 +2129,11 @@ margin-bottom: 40px;
     min-height: 100vh;          /* keep full height */
   }
 
-  .about-hero video {
-    height: 100%;               /* keep cover working on smaller screens */
-    width: 100%;
-  }
+.about-hero video {
+  height: 100%;        /* keep full height */
+  width: auto;         /* allows overflow to the left */
+  min-width: 100%;     /* prevents gaps on the right */
+}
 
   .about-hero h1,
   .about-hero p {
@@ -2079,6 +2160,7 @@ margin-bottom: 40px;
 
   .about-hero h1 {
     font-size: 22px;
+    margin-top: 50px;
   }
 }
 
@@ -2097,7 +2179,7 @@ margin-bottom: 40px;
   color: white;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 38px;
   line-height: 1.2;
   margin: 30px auto 100px auto; /* top and bottom spacing */
   letter-spacing: 0.5px;
@@ -2151,6 +2233,10 @@ margin-bottom: 40px;
   .sector-row {
     flex-direction: row;
   }
+  .sectors-section{
+      margin-top: -100px;
+
+  }
 }
 
 .philosophy {
@@ -2172,7 +2258,7 @@ margin-bottom: 40px;
   color: white;
 }
 .philosophy p {
- max-width: 600px;
+  max-width: 600px;
   width: 60%;
   margin: 0 auto 22px auto;
   font-size: 1.2rem;
@@ -2195,6 +2281,36 @@ margin-bottom: 40px;
   width:100%;
   height:200px;
   pointer-events:none;
+}
+
+/*dais group section*/
+
+.dais-group h1{
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin-top: 80px;
+  
+}
+.dais-group img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (max-widtH:600PX){
+  .dais-group h1{
+    font-size: 26px;
+    margin-top: 40px;
+  }
+  .dais-group img {
+    width: 90%;
+  } 
 }
 /* ===============================
    INNOVATING SECTION
@@ -2272,7 +2388,7 @@ margin-bottom: 40px;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  max-width: 660px;
+  max-width: 580px;
 }
 
 .innovating-right h2 {
