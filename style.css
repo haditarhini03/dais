@@ -869,20 +869,18 @@ header.scrolled {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;   /* optional background */
-  top: 100px;
 }
 
 .about-dais h1 {
   position: absolute;
-  top: -50px;
   left: 50%;
+  top: 50px;
   transform: translateX(-50%);
   color: black;
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
-  z-index: 2;
+  margin-bottom: 50px;
 }
 
 /* === Orbit container setup === */
@@ -896,12 +894,12 @@ header.scrolled {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
 }
 
 /* center logo */
 .center-logo {
   position: absolute;
-  z-index: 3;
 }
 
 .center-logo img {
@@ -957,7 +955,6 @@ header.scrolled {
 /* center button */
 .about-dais .light.center {
   position: absolute;
-  margin-top: 700px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1107,16 +1104,16 @@ header.scrolled {
   to   { transform: rotate(-504deg); }
 }
 .about-dais button {
-    margin-top: -100px; /* Negative margin to move it up */
+    margin-top: 40px;   /* push it BELOW the orbits */
     position: relative;
-    z-index: 10;
+    z-index: 20;        /* stays above background but never overlaps orbits */
 }
 
 
 /* --- Small screens (phones) --- */
 @media (max-width: 600px) {
   .about-dais{
-    margin-top: -150px;
+    margin-top: 50px;
   }
   .orbit-container {
     margin-top: -440px;
@@ -1155,7 +1152,11 @@ header.scrolled {
 
   .about-dais h1 {
     font-size: 1.8rem;
-    margin-top: 40px;
+    margin-top: -140px;
+  }
+  .about-button{
+    margin-top: -50px;
+    margin-bottom: -50px;
   }
 
   /* Center orbits properly again */
@@ -1532,7 +1533,7 @@ margin-bottom: 40px;
 }
 
 .project-card {
-  background: #f7f7f7;
+  background: #d7d7d7;
   padding: 25px;
   width: 600px;
   margin: 0px 20px 0px 50px;
@@ -2084,7 +2085,7 @@ margin-bottom: 40px;
 .sectors-section {
   background: #000;
   padding: 100px 18%;
-  margin-top: -190px;
+  margin-top: -50px;
   color: #fff;
   font-family: "Inter", sans-serif;
   text-align: center; /* centers h1 naturally */
@@ -2271,7 +2272,7 @@ margin-bottom: 40px;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  max-width: 650px;
+  max-width: 660px;
 }
 
 .innovating-right h2 {
@@ -2281,6 +2282,8 @@ margin-bottom: 40px;
   line-height: 1.2;
   margin-bottom: 40px;
   width: 100%;
+  text-align: left;
+
 }
 
 .innovating-right p {
@@ -2311,13 +2314,12 @@ margin-bottom: 40px;
   }
 
   .innovating-right {
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
   }
 
   .innovating-right h2 {
-    margin-left: 0;
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .innovating-right p {
@@ -2369,11 +2371,6 @@ margin-bottom: 40px;
   .box-sm {
     width: 80%;
     height: auto;
-  }
-
-  .innovating-right h2 {
-    font-size: 24px;
-    margin-bottom: 25px;
   }
 
   .innovating-right p {
