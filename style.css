@@ -638,7 +638,7 @@ header.scrolled {
   align-items: center;
   width: max-content;        /* lets the track be as wide as needed */
   will-change: transform;
-  animation: scrollTrack 80s linear infinite;
+  animation: scrollTrack 100s linear infinite;
 }
 
 /* each item fixed size so animation is consistent */
@@ -1844,7 +1844,7 @@ margin-bottom: 40px;
 .team-track {
   display: flex;
   gap: 20px;
-  animation: slideTeam 20s linear infinite;
+  animation: slideTeam 30s linear infinite;
 }
 
 .team-member {
@@ -2557,7 +2557,7 @@ margin-bottom: 40px;
 
 .services-left {
   width: 40%;
-  max-width: 580px;
+  max-width: 500px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -2633,7 +2633,7 @@ margin-bottom: 40px;
   );
   flex-shrink: 0;        /* don’t shrink */
   align-self: stretch;    /* fill the height of the flex container */
-  margin-left: 150px;     /* spacing from left column */
+  margin-left: 100px;     /* spacing from left column */
 }
 
 /* ensure .services-right stretches to determine separator height */
@@ -2653,17 +2653,30 @@ margin-bottom: 40px;
 
 /* Right side layout */
 .services-right {
-  width: 480px;
+  width: 580px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
-  text-align: flex-start;
-  margin-left: 180px;
+  text-align: left;
+  margin-left: 80px;
   margin-top: -50px;
   position: static;
   padding: 0;
+}
+
+.service-description {
+  transition: opacity 0.4s ease;
+  display: block !important;
+}
+
+.service-description.fade-out {
+  opacity: 0;
+}
+
+.service-description.fade-in {
+  opacity: 1;
+  display: block !important;
 }
 .services-right h1{
   margin-bottom: 40px;
@@ -2704,26 +2717,23 @@ margin-bottom: 40px;
 }
 .services-right li{
 font-weight: 400;
-font-size: 20px;
+font-size: 18px;
 margin-bottom: 20px;
-line-height: 110%;
+line-height: 120%;
 letter-spacing: 0%;
+margin-left: 40px;
 
-width: 500px;
+width: 570px;
 }
-.service-description {
-  display: block !important;
+.service-description p{
+  margin-bottom: 22px;
+  line-height: 1.3rem;
+  font-size: 18px;
+  color: black;
+  max-width: 600px;
+  text-align: left;
 }
 
-.service-description {
-  transition: opacity 0.4s ease;
-}
-.service-description.fade-out {
-  opacity: 0;
-}
-.service-description.fade-in {
-  opacity: 1;
-}
 @media (max-width: 1400px) {
   .services-right{
     margin-left: 50px;
@@ -2749,13 +2759,11 @@ width: 500px;
   .services-left { position: static; top: auto; width: 120%; margin: 0;padding:0; margin-top: -50px;}
   .thumb {padding: 0;margin: 0;}
   .services-left p{font-size: 8px;}
-  .services-right
-  {
-    width: 350px;
-    margin-left: 0;
+  .services-right {
+    width: 145%;
+    margin-left: -60px !important;
     margin-top: 0;
     padding: 0;
-    margin-left: -50px;
   }
   .services-right h1{
     font-size: 21px;
