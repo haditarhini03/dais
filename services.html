@@ -34,9 +34,9 @@
         </div>
             <button class="dark">Contact Us</button>
         <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
     <!-- HERO SECTION -->
@@ -85,7 +85,7 @@
     </div>
     </section>
 
-     <footer class="footer">
+    <footer class="footer">
     <img src="media/footer.png" alt="footer-background" class="footer-background">
 
     <div class="footer-top">
@@ -116,8 +116,8 @@
                 </p>
                 <h3>DAIS SAS</h3>
                 <p>
-                   75008 Paris, France<br>
-                   P : +33 ( 6 ) 70443869
+                    75008 Paris, France<br>
+                    P : +33 ( 6 ) 70443869
                 </p>
             </div>
 
@@ -437,23 +437,23 @@
         </script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const thumbs = Array.from(document.querySelectorAll('.thumb[data-target]'));
-  if (!thumbs.length) return;
+    document.addEventListener('DOMContentLoaded', function () {
+    const thumbs = Array.from(document.querySelectorAll('.thumb[data-target]'));
+    if (!thumbs.length) return;
 
-  // adjust this value to match the fixed header offset so the target is visible below header
-  const headerOffset = 60;
+    // adjust this value to match the fixed header offset so the target is visible below header
+    const headerOffset = 60;
 
-  thumbs.forEach(thumb => {
-    thumb.addEventListener('click', function (e) {
-      const id = thumb.dataset.target;
-      const target = document.getElementById(id);
-      if (!target) return;
-      const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
-      window.scrollTo({ top, behavior: 'smooth' });
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', function (e) {
+        const id = thumb.dataset.target;
+        const target = document.getElementById(id);
+        if (!target) return;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        });
     });
-  });
-});
+    });
     </script>
 
     <script>
