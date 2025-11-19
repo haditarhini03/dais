@@ -1,0 +1,26 @@
+$(function(){
+    var banners = $('#banners');
+    var qtd = banners.find('.item').length;
+    banners.owlCarousel({
+        animateOut: 'fadeOut',
+        items:1,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
+        loop:qtd > 1,
+        nav:true,
+        dots:false,
+    });
+    var servicos = $('#box_servicos');
+    var qtd = servicos.find('.sep').length;
+    servicos.owlCarousel({
+        items:1,
+        autoplay:true,
+        autoheight:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
+        loop:qtd > 1,
+        nav:true,
+        dots:false,
+    });
+});
