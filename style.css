@@ -591,8 +591,10 @@ header.scrolled {
   bottom: 40px;          /* adjust distance from bottom */
   left: 50%;
   transform: translateX(-50%);
-  width: 550px;
+  width: 850px;
   z-index: 2;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.66);
 }
 
 /* Center h1 and p together */
@@ -628,7 +630,7 @@ header.scrolled {
 /* Carousel container */
 .logo-carousel {
   width: 550px;
-  height: 70px;              /* enough to fit logo height */
+  height: 90px;              /* enough to fit logo height */
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -647,15 +649,12 @@ header.scrolled {
   animation: scrollTrack 100s linear infinite;
 }
 
-/* each item fixed size so animation is consistent */
-.logo-item {
-  flex: 0 0 auto;
-}
 
 /* logo image sizing */
 .logo-item img {
-  height: 50px;
+  height: 70px;
   display: block;
+  max-width: 200px;
 }
 
 /* pause on hover */
