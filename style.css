@@ -21,7 +21,7 @@ button.dark {
   background: transparent;
   border: 2px solid white;
   color: white;
-  width: 135px;
+  width: 160px;
   height: 40px;
   padding: 8px 22px;
   border-radius: 25px;
@@ -44,7 +44,7 @@ button.light {
   background: transparent;
   border: 2px solid black;
   color: var(--orange);
-  width: 135px;
+  width: 160px;
   height: 40px;
   padding: 8px 22px;
   border-radius: 25px;
@@ -149,7 +149,9 @@ header.scrolled {
 .navlogo {
   position: relative;
   display: inline-block;
-  margin-left: -50px;
+  margin-right: 50px;
+  margin-left: 0px;
+
 }
 
 .navlogo img {
@@ -178,7 +180,8 @@ header.scrolled {
   display: flex;
   gap: 44px;
   align-items: center;
-  margin-left: 140px; /* pushes links slightly away from logo */
+  margin-left: 160px; /* pushes links slightly away from logo */
+  margin-right: 160px; /* pushes links slightly away from logo */
   margin-top: -10px;
   font-size: 20px;
 }
@@ -213,6 +216,20 @@ header.scrolled {
 
 .header button{
   margin-bottom: -95px;
+}
+.language-selector select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 15px;
+    align-content: right;
+}
+.lang-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;     /* space between items */
 }
 
 /* ========== HAMBURGER MENU ========== */
@@ -621,7 +638,7 @@ header.scrolled {
 
 /* Paragraph */
 .hero p {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.6;
   font-family: 'Cambria Math', serif;
   max-width: 900px;
@@ -751,7 +768,7 @@ header.scrolled {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
+  /* text-align: left; */
   margin-top: 100px;
     max-width: 450px; 
   width: 100%;
@@ -760,7 +777,7 @@ header.scrolled {
 .main-services-right h2 {
   font-family: 'Oswald';
   font-weight: 400;
-  font-size: 32px;
+  font-size: 26px;
   margin-bottom: 50px;
 }
 
@@ -770,7 +787,7 @@ header.scrolled {
   line-height: 1.4;
   margin-left: -0px;
   color: black;
-  text-align: left;
+  /* text-align: left; */
   justify-content: left;
   align-items: flex-start;
   margin-bottom: 100px;
@@ -1279,7 +1296,6 @@ margin-bottom: 40px;
   margin-top: 20px;
   margin-bottom: 1px;
   text-align: center;
-  letter-spacing: 6px;
 }
 
 /* CONTAINER FOR 3 CARDS */
@@ -2365,7 +2381,7 @@ margin-bottom: 40px;
 .philosophy h1 {
   font-size: 3.2rem;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 0px;
   font-weight: 700;
   margin-bottom: 45px;
   color: white;

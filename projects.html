@@ -19,517 +19,524 @@
     <header>
         <div class="navbar">
             <div class="right-header"></div>
+
             <a href="index.html" class="navlogo">
-<img src="media/dark-logo.png" alt="DAIS Logo" class="darkimg">
-<img src="media/light-logo.png" alt="DAIS Logo" class="lightimg">
+                <img src="media/dark-logo.png" alt="DAIS Logo" class="darkimg">
+                <img src="media/light-logo.png" alt="DAIS Logo" class="lightimg">
             </a>
+
             <nav class="navlinks">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="clients.html">Clients</a>
-                <a href="team.html">Team</a>
-                <a href="news.html">News</a>
-                <a href="contact.html">Contact</a>
+                <a href="about.html" data-t="nav_about">About</a>
+                <a href="services.html" data-t="nav_services">Services</a>
+                <a href="projects.html" data-t="nav_projects">Projects</a>
+                <a href="clients.html" data-t="nav_clients">Clients</a>
+                <a href="team.html" data-t="nav_team">Team</a>
+                <a href="news.html" data-t="nav_news">News</a>
+                <a href="contact.html" data-t="nav_contact">Contact</a>
             </nav>
         </div>
-            <button class="dark" onclick="window.location.href='contact.html'">Contact Us</button>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <div class="lang-menu">
+            <div class="language-selector">
+                <select id="lang-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+
+            <button class="dark" onclick="window.location.href='contact.html'" data-t="btn_contact_us">
+                Contact Us
+            </button>
+
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </header>
-    
+
     <section class="projects-hero">
-        <h1>Projects</h1>
-        <p>Browse our global experience by sector</p>
+        <h1 data-t="projects_title">Projects</h1>
+        <p data-t="projects_intro">Browse our global experience by sector</p>
     </section>
 
     <section class="projects-section">
 
         <!-- Filter Buttons -->
         <div class="filter-bar">
-            <button class="filter-btn active" data-sector="all">All</button>
-            <button class="filter-btn" data-sector="environment">Environment</button>
-            <button class="filter-btn" data-sector="waste">Waste Management</button>
-            <button class="filter-btn" data-sector="city">City & Urban Development</button>
-            <button class="filter-btn" data-sector="energy">Energy</button>
-            <button class="filter-btn" data-sector="agriculture">Agriculture</button>
-
+            <button class="filter-btn active" data-sector="all" data-t="filter_all">All</button>
+            <button class="filter-btn" data-sector="environment" data-t="filter_environment">Environment</button>
+            <button class="filter-btn" data-sector="waste" data-t="filter_waste">Waste Management</button>
+            <button class="filter-btn" data-sector="city" data-t="filter_city">City & Urban Development</button>
+            <button class="filter-btn" data-sector="energy" data-t="filter_energy">Energy</button>
+            <button class="filter-btn" data-sector="agriculture" data-t="filter_agriculture">Agriculture</button>
         </div>
 
-<!-- Projects Grid -->
-<div class="projects-grid">
+        <!-- Projects Grid -->
+        <div class="projects-grid">
 
-    <!-- ========================= -->
-    <!--       WASTE PROJECTS      -->
-    <!-- ========================= -->
+            <!-- ========================= -->
+            <!--       WASTE PROJECTS      -->
+            <!-- ========================= -->
 
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/bndes.jpeg" alt="projects-image">
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/bndes.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Structuring of Concessions for Municipal Solid Waste Management</h3>
+                        <p><strong data-t="client">Client:</strong> Government of Goiás / BNDES</p>
+                        <p><strong>Year:</strong> 2025</p>
+                    </div>
+                </div>
             </div>
-            <div class="project-text">
-                <h3>Structuring of Concessions for Municipal Solid Waste Management</h3>
-                <p><strong>Client:</strong> Government of Goiás / BNDES</p>
-                <p><strong>Year:</strong> 2025</p>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/deloitte.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Independent Technical Evaluation of the Energy Recovery Project of MSW / URE Barueri</h3>
+                        <p><strong>Client:</strong> Deloitte Touche Tohmatsu</p>
+                        <p><strong>Year:</strong> 2024</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/eubank.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Technical Advisory for Digitalization & Recycling LLP – Kazakhstan</h3>
+                        <p><strong>Client:</strong> EBRD</p>
+                        <p><strong>Year:</strong> 2022–2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/simpar.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Technical & Economic Feasibility Study – Rio de Janeiro</h3>
+                        <p><strong>Client:</strong> SIMPAR Group</p>
+                        <p><strong>Year:</strong> 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/giz.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>EU–Brazil Policy Dialogue on Methane Reductions</h3>
+                        <p><strong>Client:</strong> EU / GIZ</p>
+                        <p><strong>Year:</strong> 2023–2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/mwan.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Violations and Fines Schedule – Saudi Arabia</h3>
+                        <p><strong>Client:</strong> MWAN</p>
+                        <p><strong>Year:</strong> 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/lcba.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Technical Assistance for Circular Economy Projects</h3>
+                        <p><strong>Client:</strong> LCBA / IDOM, Brazil</p>
+                        <p><strong>Year:</strong> 2022–2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/dornier.png" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>EPR System for Tyres, Batteries & Single-Use Plastics – KSA</h3>
+                        <p><strong>Client:</strong> MWAN / DORNIER Consulting & Engineering</p>
+                        <p><strong>Year:</strong> 2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/momah.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Waste Segregation at Source Program</h3>
+                        <p><strong>Client:</strong> MoMAH / DORNIER Consulting & Engineering</p>
+                        <p><strong>Year:</strong> 2019</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/msi.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Design of Waste E-manifest System</h3>
+                        <p><strong>Client:</strong> MWAN / MSI</p>
+                        <p><strong>Year:</strong> 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/applus.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Licensing & Permitting System for Waste Sector – KSA</h3>
+                        <p><strong>Client:</strong> MWAN / APPLUS</p>
+                        <p><strong>Year:</strong> 2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="waste">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/confidential.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Optimization of Government Spending on Waste Management</h3>
+                        <p><strong>Client:</strong> Ministry of Finance / Confidential</p>
+                        <p><strong>Year:</strong> 2017</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!--     ENVIRONMENT PROJECTS  -->
+            <!-- ========================= -->
+
+            <div class="project-card" data-sector="environment">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/ncvc.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>PMO Support for the Green KSA Project</h3>
+                        <p><strong>Client:</strong> NCVC / DORNIER Consulting & Engineering</p>
+                        <p><strong>Year:</strong> 2022–2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="environment">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/ncvc2024.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Operational Services for Establishment of HSE Department</h3>
+                        <p><strong>Client:</strong> NCVC / DORNIER Consulting & Engineering</p>
+                        <p><strong>Year:</strong> 2023–2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="environment">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/ncvc22-24.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Technical & Management Support for Desertification & Drought</h3>
+                        <p><strong>Client:</strong> NCVC / DORNIER Consulting & Engineering</p>
+                        <p><strong>Year:</strong> 2022–2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!--    CITY & URBAN DEV.     -->
+            <!-- ========================= -->
+
+            <div class="project-card" data-sector="city">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/remat.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Pre-Licensing Inspection System – Riyadh</h3>
+                        <p><strong>Client:</strong> REMAT Al-Riyadh / APPLUS</p>
+                        <p><strong>Year:</strong> 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="city">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/bmi.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Investment Opportunities Study – South Africa & SADC</h3>
+                        <p><strong>Client:</strong> DBSA / BMI Research</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="city">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/momah-applus.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Quality Assurance System for City Cleaning – KSA</h3>
+                        <p><strong>Client:</strong> MoMAH / APPLUS</p>
+                        <p><strong>Year:</strong> 2017–2018</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="city">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/harald.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Sewage Treatment Plant Location Study – Brazil</h3>
+                        <p><strong>Client:</strong> Harald Industria e Comercio de Alimentos S/A</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!--        ENERGY PROJECTS    -->
+            <!-- ========================= -->
+
+            <div class="project-card" data-sector="energy">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/sumitomo.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Regulatory & Market Study for Biomethane & Carbon Credits</h3>
+                        <p><strong>Client:</strong> SUMITOMO Corporation</p>
+                        <p><strong>Year:</strong> 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="energy">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/minenv.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Wood Pellets Production Feasibility Study – Amazon Region</h3>
+                        <p><strong>Client:</strong> Ministry of Environment / ICMBio / Brazilian Forest Service</p>
+                        <p><strong>Year:</strong> 2020–2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!--     AGRICULTURE PROJECTS  -->
+            <!-- ========================= -->
+
+            <div class="project-card" data-sector="agriculture">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/hailey.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Enhancing Plant Production Capacity</h3>
+                        <p><strong>Client:</strong> Hailey Plant Tissue Culture Labs, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="agriculture">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/sweden.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Design & Development of Plantform Bioreactor</h3>
+                        <p><strong>Client:</strong> Swedish Agricultural University</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="agriculture">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/gadera-services.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Technical Advisory Services</h3>
+                        <p><strong>Client:</strong> Gadera Ltd & Fitzgerald Nurseries</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="agriculture">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/gadera.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Hydroponic & Aeroponic Systems for Mini Tuber Production</h3>
+                        <p><strong>Client:</strong> Gadera Ltd & Fitzgerald Nurseries</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="agriculture">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/sheffield.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Plant Intellectual Rights Project (EU)</h3>
+                        <p><strong>Client:</strong> Sheffield University</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-sector="agriculture">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="media/projects/fitzgerald.jpeg" alt="projects-image">
+                    </div>
+                    <div class="project-text">
+                        <h3>Sweet Potato Protocol Development</h3>
+                        <p><strong>Client:</strong> Fitzgerald Nurseries, Europe</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/deloitte.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Independent Technical Evaluation of the Energy Recovery Project of MSW / URE Barueri</h3>
-                <p><strong>Client:</strong> Deloitte Touche Tohmatsu</p>
-                <p><strong>Year:</strong> 2024</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/eubank.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Technical Advisory for Digitalization & Recycling LLP – Kazakhstan</h3>
-                <p><strong>Client:</strong> EBRD</p>
-                <p><strong>Year:</strong> 2022–2024</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/simpar.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Technical & Economic Feasibility Study – Rio de Janeiro</h3>
-                <p><strong>Client:</strong> SIMPAR Group</p>
-                <p><strong>Year:</strong> 2024</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/giz.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>EU–Brazil Policy Dialogue on Methane Reductions</h3>
-                <p><strong>Client:</strong> EU / GIZ</p>
-                <p><strong>Year:</strong> 2023–2024</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/mwan.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Violations and Fines Schedule – Saudi Arabia</h3>
-                <p><strong>Client:</strong> MWAN</p>
-                <p><strong>Year:</strong> 2023</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/lcba.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Technical Assistance for Circular Economy Projects</h3>
-                <p><strong>Client:</strong> LCBA / IDOM, Brazil</p>
-                <p><strong>Year:</strong> 2022–2023</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/dornier.png" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>EPR System for Tyres, Batteries & Single-Use Plastics – KSA</h3>
-                <p><strong>Client:</strong> MWAN / DORNIER Consulting & Engineering</p>
-                <p><strong>Year:</strong> 2021</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/momah.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Waste Segregation at Source Program</h3>
-                <p><strong>Client:</strong> MoMAH / DORNIER Consulting & Engineering</p>
-                <p><strong>Year:</strong> 2019</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/msi.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Design of Waste E-manifest System</h3>
-                <p><strong>Client:</strong> MWAN / MSI</p>
-                <p><strong>Year:</strong> 2022</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/applus.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Licensing & Permitting System for Waste Sector – KSA</h3>
-                <p><strong>Client:</strong> MWAN / APPLUS</p>
-                <p><strong>Year:</strong> 2021</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="waste">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/confidential.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Optimization of Government Spending on Waste Management</h3>
-                <p><strong>Client:</strong> Ministry of Finance / Confidential</p>
-                <p><strong>Year:</strong> 2017</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================= -->
-    <!--     ENVIRONMENT PROJECTS  -->
-    <!-- ========================= -->
-
-    <div class="project-card" data-sector="environment">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/ncvc.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>PMO Support for the Green KSA Project</h3>
-                <p><strong>Client:</strong> NCVC / DORNIER Consulting & Engineering</p>
-                <p><strong>Year:</strong> 2022–2023</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="environment">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/ncvc2024.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Operational Services for Establishment of HSE Department</h3>
-                <p><strong>Client:</strong> NCVC / DORNIER Consulting & Engineering</p>
-                <p><strong>Year:</strong> 2023–2024</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="environment">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/ncvc22-24.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Technical & Management Support for Desertification & Drought</h3>
-                <p><strong>Client:</strong> NCVC / DORNIER Consulting & Engineering</p>
-                <p><strong>Year:</strong> 2022–2024</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================= -->
-    <!--    CITY & URBAN DEV.     -->
-    <!-- ========================= -->
-
-    <div class="project-card" data-sector="city">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/remat.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Pre-Licensing Inspection System – Riyadh</h3>
-                <p><strong>Client:</strong> REMAT Al-Riyadh / APPLUS</p>
-                <p><strong>Year:</strong> 2024</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="city">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/bmi.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Investment Opportunities Study – South Africa & SADC</h3>
-                <p><strong>Client:</strong> DBSA / BMI Research</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="city">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/momah-applus.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Quality Assurance System for City Cleaning – KSA</h3>
-                <p><strong>Client:</strong> MoMAH / APPLUS</p>
-                <p><strong>Year:</strong> 2017–2018</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="city">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/harald.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Sewage Treatment Plant Location Study – Brazil</h3>
-                <p><strong>Client:</strong> Harald Industria e Comercio de Alimentos S/A</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================= -->
-    <!--        ENERGY PROJECTS    -->
-    <!-- ========================= -->
-
-    <div class="project-card" data-sector="energy">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/sumitomo.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Regulatory & Market Study for Biomethane & Carbon Credits</h3>
-                <p><strong>Client:</strong> SUMITOMO Corporation</p>
-                <p><strong>Year:</strong> 2022</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="energy">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/minenv.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Wood Pellets Production Feasibility Study – Amazon Region</h3>
-                <p><strong>Client:</strong> Ministry of Environment / ICMBio / Brazilian Forest Service</p>
-                <p><strong>Year:</strong> 2020–2022</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================= -->
-    <!--     AGRICULTURE PROJECTS  -->
-    <!-- ========================= -->
-
-    <div class="project-card" data-sector="agriculture">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/hailey.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Enhancing Plant Production Capacity</h3>
-                <p><strong>Client:</strong> Hailey Plant Tissue Culture Labs, Sri Lanka</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="agriculture">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/sweden.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Design & Development of Plantform Bioreactor</h3>
-                <p><strong>Client:</strong> Swedish Agricultural University</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="agriculture">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/gadera-services.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Technical Advisory Services</h3>
-                <p><strong>Client:</strong> Gadera Ltd & Fitzgerald Nurseries</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="agriculture">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/gadera.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Hydroponic & Aeroponic Systems for Mini Tuber Production</h3>
-                <p><strong>Client:</strong> Gadera Ltd & Fitzgerald Nurseries</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="agriculture">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/sheffield.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Plant Intellectual Rights Project (EU)</h3>
-                <p><strong>Client:</strong> Sheffield University</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card" data-sector="agriculture">
-        <div class="project-inner">
-            <div class="project-image">
-                <img src="media/projects/fitzgerald.jpeg" alt="projects-image">
-            </div>
-            <div class="project-text">
-                <h3>Sweet Potato Protocol Development</h3>
-                <p><strong>Client:</strong> Fitzgerald Nurseries, Europe</p>
-            </div>
-        </div>
-    </div>
-
-</div>
 
     </section>
 
-  <footer class="footer">
-    <img src="media/footer.png" alt="footer-background" class="footer-background">
+    <footer class="footer">
+        <img src="media/footer.png" class="footer-background">
 
-    <div class="footer-top">
+        <div class="footer-top">
+            <div class="footer-info">
+                <a href="index.html"><img src="media/daislogo.svg" class="logo"></a>
+            </div>
 
-        <!-- LEFT COLUMN — LOGO -->
-        <div class="footer-info">
-            <a href="index.html">
-                <img src="media/daislogo.svg" alt="Dais Logo" class="logo">
-            </a>
+            <div class="footer-locations">
+
+                <div class="location-col">
+                    <h3 data-t="footer_contact_us">Contact Us</h3>
+                    <p>
+                        <a href="mailto:info@dais-global.com">E : info@dais-global.com</a><br>
+                        <a href="http://www.dais-global.com">w : www.dais-global.com</a>
+                    </p>
+                </div>
+
+                <!-- LOCATION COLUMNS (unchanged text) -->
+                <div class="location-col">
+                    <h3>DAIS Energy & Envuronment Ltd</h3>
+                    <p>
+                        69 Trinity Street, Dublin 2<br>
+                        D02 EY47, Dublin, Ireland<br>
+                        P : +353 (1 ) 209 19 16
+                    </p>
+                    <h3>DAIS SAS</h3>
+                    <p>
+                        75008 Paris, France<br>
+                        P : +33 ( 6 ) 70443869
+                    </p>
+                </div>
+
+                <div class="location-col">
+                    <h3>DAIS Brazil Ltd</h3>
+                    <p>
+                        Rua Dr. Paulo Tinoco Cabral,<br>
+                        613, Suite 14 , Ribeirão<br>
+                        São Paulo, Brazil<br>
+                        P : +55 ( 16 ) 3237 2212
+                    </p>
+                    <h3>WTEEC Engineering Ltd</h3>
+                    <p>
+                        Rua Bandeira Paulista, 600<br>
+                        Itaim Bibi, São Paulo (SP)<br>
+                        P : +55 11 3705 6015
+                    </p>
+                </div>
+
+                <div class="location-col">
+                    <h3>DAIS Global SAL</h3>
+                    <p>
+                        Level2 , Louis Vuitton Building<br>
+                        Suite 2029 , Allenby Street<br>
+                        Beirut, Lebanon<br>
+                        P : +961 ( 1 ) 95 76 37
+                    </p>
+                    <h3>TC Propagation LTD</h3>
+                    <p>
+                        Park Bree, Enniscorthy<br>
+                        Y21 P 8 X 9<br>
+                        Wexford, Ireland<br>
+                        P : +353 873113811
+                    </p>
+                </div>
+
+            </div>
         </div>
 
-        <!-- RIGHT SIDE — 3 COLUMNS OF LOCATIONS -->
-        <div class="footer-locations">
-            <div class="location-col">
-                <h3>Contact Us</h3>
-                <p>
-                    <a href="mailto:info@dais-global.com">E : info@dais-global.com</a> <br>
-                    <a href="http://www.dais-global.com">w : www.dais-global.com</a>
-                </p>
-            </div>
-            <!-- Column 1 -->
-            <div class="location-col">
-                <h3>DAIS Energy & Envuronment Ltd</h3>
-                <p>
-                    69 Trinity Street, Dublin 2<br>
-                    D02 EY47, Dublin, Ireland<br>
-                    P : +353 (1 ) 209 19 16
-                </p>
-                <h3>DAIS SAS</h3>
-                <p>
-                   75008 Paris, France<br>
-                   P : +33 ( 6 ) 70443869
-                </p>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="location-col">
-                <h3>DAIS Brazil Ltd</h3>
-                <p>
-                    Rua Dr. Paulo Tinoco Cabral,<br>
-                    613, Suite 14 , Ribeirão<br>
-                    São Paulo, Brazil<br>
-                    P : +55 ( 16 ) 3237 2212
-                </p>
-                <h3>WTEEC Engineering Ltd</h3>
-                <p>
-                    Rua Bandeira Paulista, 600<br>
-                    Itaim Bibi, São Paulo (SP)<br>
-                    P : +55 11 3705 6015
-                </p>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="location-col">
-                
-                <h3>DAIS Global SAL</h3>
-                <p>
-                    Level2 , Louis Vuitton Building<br>
-                    Suite 2029 , Allenby Street<br>
-                    Beirut, Lebanon<br>
-                    P : +961 ( 1 ) 95 76 37
-                </p>
-                <h3>TC Propagation LTD</h3>
-                <p>
-                    Park Bree, Enniscorthy<br>
-                    Y21 P 8 X 9<br>
-                    Wexford, Ireland<br>
-                    P : +353 873113811
-                </p>
-            </div>
-
+        <div class="newsletter">
+            <p data-t="newsletter_title">Sign up to our newsletter</p>
+            <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
+                <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
+            </form>
         </div>
-    </div>
 
-    <!-- NEWSLETTER -->
-    <div class="newsletter">
-        <p>Sign up to our newsletter</p>
-        <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
-            <input type="email" name="email" placeholder="Your email" required>
-            <button type="submit" class="dark">Sign Up</button>
-        </form>
-    </div>
+        <div class="footer-bottom">
+            <ul class="secondary-nav">
+                <a href="terms.html" data-t="footer_terms">Terms</a>
+                <a href="policies.html" data-t="footer_policy">Privacy Policy</a>
+                <a href="principles.html" data-t="footer_principles">Principles</a>
+                <a href="cookies.html" data-t="footer_cookies">Cookie Settings</a>
+            </ul>
+        </div>
 
-    <!-- BOTTOM LINKS -->
-    <div class="footer-bottom">
-        <ul class="secondary-nav">
-            <a href="terms.html">Terms</a>
-            <a href="policies.html">Privacy Policy</a>
-            <a href="principles.html">Principles</a>
-            <a href="cookies.html">Cookie Settings</a>
-        </ul>
-    </div>
+    </footer>
 
-</footer>
-
-            
     <section class="copyright">
-            <img src="media/copyright.png" alt="Copyright Background" class="copyright-background">
-            <p>© 2025 DAIS Global. All rights reserved.<br>
-                No part of this website or its content may be reproduced or used without prior written permission from DAIS Global</p>
+        <img src="media/copyright.png" class="copyright-background">
+        <p data-t="copyright">
+            © 2025 DAIS Global. All rights reserved.<br>
+            No part of this website or its content may be reproduced or used without prior written permission from DAIS Global
+        </p>
     </section>
 
     <script>
@@ -551,60 +558,6 @@
             }
         });
     </script>
-    <script>
-        // Array of service data
-        const services = [
-            {
-            image: "media/digitalsolution.png",
-            title: "PROJECT DEVELOPMENT",
-            description: "PROJECT DEVELOPMENT<br>FINANCING SOLUTIONS<br>EPC<br>O&M"
-            },
-            {
-            image: "media/projectdev.png",
-            title: "DIGITAL SOLUTIONS",
-            description: "DIGITAL TRANSFORMATION<br>SYSTEM INTEGRATION<br>DIGITAL PRODUCTS"
-            },
-            {
-            image: "media/techproducts.png",
-            title: "TECHNOLOGY PRODUCTS",
-            description: "R&D<br>MANUFACTURING<br>TECHNOLOGY TRANSFER"
-            },
-            {
-            image: "media/consulting.png",
-            title: "CONSULTING & ENGINEERING",
-            description: "SYSTEM DESIGN & ENGINEERING<br>CONSULTING SERVICES<br>INTEGRATED MODELING"
-            }
-        ];
-
-        let currentService = 0;
-
-        // Select elements
-        const serviceImage = document.getElementById("service-image");
-        const serviceTitle = document.getElementById("service-title");
-        const serviceDescription = document.getElementById("service-description");
-        const prevButton = document.getElementById("prev-service");
-        const nextButton = document.getElementById("next-service");
-
-        // Function to update service content
-        function updateService(index) {
-            const service = services[index];
-            serviceImage.src = service.image;
-            serviceTitle.innerHTML = service.title;
-            serviceDescription.innerHTML = service.description;
-        }
-
-        // Event listeners for arrows
-        prevButton.addEventListener("click", () => {
-            currentService = (currentService - 1 + services.length) % services.length;
-            updateService(currentService);
-        });
-
-        nextButton.addEventListener("click", () => {
-            currentService = (currentService + 1) % services.length;
-            updateService(currentService);
-        });
-    </script>
-
     <script>
         const buttons = document.querySelectorAll(".filter-btn");
         const cards = document.querySelectorAll(".project-card");
@@ -642,5 +595,7 @@
         });
         });
     </script>
+    <script src="lang.js"></script>
+
 </body>
 </html>

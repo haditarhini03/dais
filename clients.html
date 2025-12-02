@@ -17,32 +17,47 @@
     <header>
         <div class="navbar">
             <div class="right-header"></div>
+
             <a href="index.html" class="navlogo">
                 <img src="media/dark-logo.png" alt="DAIS Logo" class="darkimg">
                 <img src="media/light-logo.png" alt="DAIS Logo" class="lightimg">
             </a>
+
             <nav class="navlinks">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="clients.html">Clients</a>
-                <a href="team.html">Team</a>
-                <a href="news.html">News</a>
-                <a href="contact.html">Contact</a>
+                <a href="about.html" data-t="nav_about">About</a>
+                <a href="services.html" data-t="nav_services">Services</a>
+                <a href="projects.html" data-t="nav_projects">Projects</a>
+                <a href="clients.html" data-t="nav_clients">Clients</a>
+                <a href="team.html" data-t="nav_team">Team</a>
+                <a href="news.html" data-t="nav_news">News</a>
+                <a href="contact.html" data-t="nav_contact">Contact</a>
             </nav>
         </div>
-            <button class="dark" onclick="window.location.href='contact.html'">Contact Us</button>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <div class="lang-menu">
+            <div class="language-selector">
+                <select id="lang-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+
+            <button class="dark" onclick="window.location.href='contact.html'" data-t="btn_contact_us">
+                Contact Us
+            </button>
+
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </header>
      <section class="clients">
         <div class="clients-background">
             <img src="media/clientsbackground.png" alt="">
         </div>
-        <h1>Our Clients</h1>   
+        <h1 data-t="clients_title">Our Clients</h1>   
         <!-- Clients grid: add/remove .client-card elements as needed -->
         <div class="clients-grid">
             <div class="client-card">
@@ -210,108 +225,101 @@
             </div>
         </div> 
     </section>
-    <footer class="footer">
-    <img src="media/footer.png" alt="footer-background" class="footer-background">
+        <footer class="footer">
+            <img src="media/footer.png" class="footer-background">
 
-    <div class="footer-top">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <a href="index.html"><img src="media/daislogo.svg" class="logo"></a>
+                </div>
 
-        <!-- LEFT COLUMN — LOGO -->
-        <div class="footer-info">
-            <a href="index.html">
-                <img src="media/daislogo.svg" alt="Dais Logo" class="logo">
-            </a>
-        </div>
+                <div class="footer-locations">
 
-        <!-- RIGHT SIDE — 3 COLUMNS OF LOCATIONS -->
-        <div class="footer-locations">
-            <div class="location-col">
-                <h3>Contact Us</h3>
-                <p>
-                    <a href="mailto:info@dais-global.com">E : info@dais-global.com</a> <br>
-                    <a href="http://www.dais-global.com">w : www.dais-global.com</a>
-                </p>
-            </div>
-            <!-- Column 1 -->
-            <div class="location-col">
-                <h3>DAIS Energy & Envuronment Ltd</h3>
-                <p>
-                    69 Trinity Street, Dublin 2<br>
-                    D02 EY47, Dublin, Ireland<br>
-                    P : +353 (1 ) 209 19 16
-                </p>
-                <h3>DAIS SAS</h3>
-                <p>
-                   75008 Paris, France<br>
-                   P : +33 ( 6 ) 70443869
-                </p>
-            </div>
+                    <div class="location-col">
+                        <h3 data-t="footer_contact_us">Contact Us</h3>
+                        <p>
+                            <a href="mailto:info@dais-global.com">E : info@dais-global.com</a><br>
+                            <a href="http://www.dais-global.com">w : www.dais-global.com</a>
+                        </p>
+                    </div>
 
-            <!-- Column 2 -->
-            <div class="location-col">
-                <h3>DAIS Brazil Ltd</h3>
-                <p>
-                    Rua Dr. Paulo Tinoco Cabral,<br>
-                    613, Suite 14 , Ribeirão<br>
-                    São Paulo, Brazil<br>
-                    P : +55 ( 16 ) 3237 2212
-                </p>
-                <h3>WTEEC Engineering Ltd</h3>
-                <p>
-                    Rua Bandeira Paulista, 600<br>
-                    Itaim Bibi, São Paulo (SP)<br>
-                    P : +55 11 3705 6015
-                </p>
-            </div>
+                    <!-- LOCATION COLUMNS (unchanged text) -->
+                    <div class="location-col">
+                        <h3>DAIS Energy & Envuronment Ltd</h3>
+                        <p>
+                            69 Trinity Street, Dublin 2<br>
+                            D02 EY47, Dublin, Ireland<br>
+                            P : +353 (1 ) 209 19 16
+                        </p>
+                        <h3>DAIS SAS</h3>
+                        <p>
+                            75008 Paris, France<br>
+                            P : +33 ( 6 ) 70443869
+                        </p>
+                    </div>
 
-            <!-- Column 3 -->
-            <div class="location-col">
-                
-                <h3>DAIS Global SAL</h3>
-                <p>
-                    Level2 , Louis Vuitton Building<br>
-                    Suite 2029 , Allenby Street<br>
-                    Beirut, Lebanon<br>
-                    P : +961 ( 1 ) 95 76 37
-                </p>
-                <h3>TC Propagation LTD</h3>
-                <p>
-                    Park Bree, Enniscorthy<br>
-                    Y21 P 8 X 9<br>
-                    Wexford, Ireland<br>
-                    P : +353 873113811
-                </p>
+                    <div class="location-col">
+                        <h3>DAIS Brazil Ltd</h3>
+                        <p>
+                            Rua Dr. Paulo Tinoco Cabral,<br>
+                            613, Suite 14 , Ribeirão<br>
+                            São Paulo, Brazil<br>
+                            P : +55 ( 16 ) 3237 2212
+                        </p>
+                        <h3>WTEEC Engineering Ltd</h3>
+                        <p>
+                            Rua Bandeira Paulista, 600<br>
+                            Itaim Bibi, São Paulo (SP)<br>
+                            P : +55 11 3705 6015
+                        </p>
+                    </div>
+
+                    <div class="location-col">
+                        <h3>DAIS Global SAL</h3>
+                        <p>
+                            Level2 , Louis Vuitton Building<br>
+                            Suite 2029 , Allenby Street<br>
+                            Beirut, Lebanon<br>
+                            P : +961 ( 1 ) 95 76 37
+                        </p>
+                        <h3>TC Propagation LTD</h3>
+                        <p>
+                            Park Bree, Enniscorthy<br>
+                            Y21 P 8 X 9<br>
+                            Wexford, Ireland<br>
+                            P : +353 873113811
+                        </p>
+                    </div>
+
+                </div>
             </div>
 
-        </div>
-    </div>
+            <div class="newsletter">
+                <p data-t="newsletter_title">Sign up to our newsletter</p>
+                <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                    <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
+                    <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
+                </form>
+            </div>
 
-    <!-- NEWSLETTER -->
-    <div class="newsletter">
-        <p>Sign up to our newsletter</p>
-        <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
-            <input type="email" name="email" placeholder="Your email" required>
-            <button type="submit" class="dark">Sign Up</button>
-        </form>
-    </div>
+            <div class="footer-bottom">
+                <ul class="secondary-nav">
+                    <a href="terms.html" data-t="footer_terms">Terms</a>
+                    <a href="policies.html" data-t="footer_policy">Privacy Policy</a>
+                    <a href="principles.html" data-t="footer_principles">Principles</a>
+                    <a href="cookies.html" data-t="footer_cookies">Cookie Settings</a>
+                </ul>
+            </div>
 
-    <!-- BOTTOM LINKS -->
-    <div class="footer-bottom">
-        <ul class="secondary-nav">
-            <a href="terms.html">Terms</a>
-            <a href="policies.html">Privacy Policy</a>
-            <a href="principles.html">Principles</a>
-            <a href="cookies.html">Cookie Settings</a>
-        </ul>
-    </div>
+        </footer>
 
-</footer>
-
-            
-    <section class="copyright">
-            <img src="media/copyright.png" alt="Copyright Background" class="copyright-background">
-            <p>© 2025 DAIS Global. All rights reserved.<br>
-                No part of this website or its content may be reproduced or used without prior written permission from DAIS Global</p>
-    </section>
+        <section class="copyright">
+            <img src="media/copyright.png" class="copyright-background">
+            <p data-t="copyright">
+                © 2025 DAIS Global. All rights reserved.<br>
+                No part of this website or its content may be reproduced or used without prior written permission from DAIS Global
+            </p>
+        </section>
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -334,7 +342,8 @@
         });
     </script>
     
-        
+                <script src="lang.js"></script>
+
 </body>
 </html>
 

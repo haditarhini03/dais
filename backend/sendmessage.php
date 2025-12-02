@@ -35,11 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         Subject: {$subject}\n\n
         Message:\n{$message}\n
     ";
+    $headers = "From: Website <no-reply@dais-global.com>\r\n";
 
-    // Email headers
-    $headers = "From: {$fullName} <{$email}>\r\n";
-    $headers .= "Reply-To: {$email}\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Send email
     if (mail($recipientEmail, $emailSubject, $emailBody, $headers)) {
