@@ -21,7 +21,7 @@ button.dark {
   background: transparent;
   border: 2px solid white;
   color: white;
-  width: 160px;
+  width: 155px;
   height: 40px;
   padding: 8px 22px;
   border-radius: 25px;
@@ -44,7 +44,7 @@ button.light {
   background: transparent;
   border: 2px solid black;
   color: var(--orange);
-  width: 160px;
+  width: 155px;
   height: 40px;
   padding: 8px 22px;
   border-radius: 25px;
@@ -149,9 +149,7 @@ header.scrolled {
 .navlogo {
   position: relative;
   display: inline-block;
-  margin-right: 50px;
-  margin-left: 0px;
-
+  margin-left: -50px;
 }
 
 .navlogo img {
@@ -174,14 +172,125 @@ header.scrolled {
 .navlogo:hover .lightimg {
   opacity: 1;
 }
+/* Language menu container */
+.lang-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: -10px;
+}
+
+/* Desktop language list */
+.language-list {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.language-list .sep {
+  opacity: .6;
+  padding: 0 4px;
+}
+
+.language-list .lang-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.language-list .lang-link.active {
+  text-decoration: underline;
+}
+
+/* HIDE language list on small screens */
+@media(max-width: 950px) {
+  .language-list {
+    display: none;
+  }
+}
+
+/* -------------------------------
+   HAMBURGER MENU (mobile)
+-------------------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-right: -50px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+@media (max-width: 1150px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* MOBILE NAV MENU */
+.navlinks.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background-color: rgba(220, 68, 5, 0.86);
+  padding: 20px;
+  border-radius: 12px;
+  gap: 20px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Insert language list at bottom of menu */
+.navlinks.active::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+  margin-top: 10px;
+}
+
+.navlinks.active .mobile-lang {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.mobile-lang a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-lang a.active {
+  text-decoration: underline;
+}
+
+/* Hide mobile language until menu opens */
+.mobile-lang {
+  display: none;
+}
+
+.navlinks.active + .mobile-lang {
+  display: flex !important;
+}
 
 /* NAV LINKS */
 .navlinks {
   display: flex;
   gap: 44px;
   align-items: center;
-  margin-left: 160px; /* pushes links slightly away from logo */
-  margin-right: 160px; /* pushes links slightly away from logo */
+  margin-left: 140px; /* pushes links slightly away from logo */
   margin-top: -10px;
   font-size: 20px;
 }
@@ -217,20 +326,10 @@ header.scrolled {
 .header button{
   margin-bottom: -95px;
 }
-.language-selector select {
-    padding: 6px 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
-    font-size: 15px;
-    align-content: right;
-}
-.lang-menu {
-    display: flex;
-    align-items: center;
-    gap: 15px;     /* space between items */
-}
+.language-list{color:white; display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.language-list .sep{opacity:.6;padding:0 4px}
+.language-list .lang-link{color:inherit;text-decoration:none;cursor:pointer}
+.language-list .lang-link.active{text-decoration:underline}
 
 /* ========== HAMBURGER MENU ========== */
 .hamburger {
@@ -249,7 +348,7 @@ header.scrolled {
 }
 
 /* ========== RESPONSIVE NAV ========== */
-@media (max-width: 950px) {
+@media (max-width: 1150px) {
   .navlinks {
     display: none;
   }
@@ -369,15 +468,18 @@ header.scrolled {
   color: white;
 }
 
-/* ============================================
-   NEWSLETTER
-============================================ */
-.newsletter,
-.newsletter p,
-.newsletter-form {
+/* Parent container: left + right */
+.newsletter {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 20px;
+}
+
+/* Left section (text + form) */
+.newsletter-left {
+  flex: 1;
   text-align: left;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .newsletter p {
@@ -403,9 +505,39 @@ header.scrolled {
 
 .newsletter-form input:focus {
   border-color: black;
-  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(255,165,0,0.2);
 }
 
+/* Right section: Social icons */
+.newsletter-socials {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.newsletter-socials img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.newsletter-socials img:hover {
+  opacity: 0.7;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter-socials {
+    margin-top: 15px;
+  }
+}
 /* ============================================
    BOTTOM NAV
 ============================================ */
@@ -638,7 +770,7 @@ header.scrolled {
 
 /* Paragraph */
 .hero p {
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.6;
   font-family: 'Cambria Math', serif;
   max-width: 900px;
@@ -768,7 +900,7 @@ header.scrolled {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  /* text-align: left; */
+  text-align: left;
   margin-top: 100px;
     max-width: 450px; 
   width: 100%;
@@ -777,7 +909,7 @@ header.scrolled {
 .main-services-right h2 {
   font-family: 'Oswald';
   font-weight: 400;
-  font-size: 26px;
+  font-size: 32px;
   margin-bottom: 50px;
 }
 
@@ -787,7 +919,7 @@ header.scrolled {
   line-height: 1.4;
   margin-left: -0px;
   color: black;
-  /* text-align: left; */
+  text-align: left;
   justify-content: left;
   align-items: flex-start;
   margin-bottom: 100px;
@@ -1298,34 +1430,33 @@ margin-bottom: 40px;
   text-align: center;
 }
 
-/* CONTAINER FOR 3 CARDS */
-.main-news-cards {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
+/* Main news card container */
 .main-news-card {
-  width: 30%;
+  width: 345px;                /* same as your news-card width */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
 }
 
-.main-news-card a img {
+/* Image wrapper */
+.main-news-image {
+  width: 345px;                /* match card width */
+  height: 200px;               /* same ratio as the earlier one */
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+/* Image itself */
+.main-news-image img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.main-news-card a img:hover {
-  transform: scale(1.03);
-}
+
+
 
 .main-news-title {
   margin-top: 15px;
@@ -1349,6 +1480,9 @@ margin-bottom: 40px;
   text-align: left;
 }
 
+.main-news button{
+  width: 165px;
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -1417,21 +1551,20 @@ margin-bottom: 40px;
 
 /* Image container */
 .news-image {
-    margin-top: -180px;
-
   width: 100%;
-  aspect-ratio: 16 / 9; /* consistent proportions */
+  height: 200px;          /* fixed height or adjust as you like */
   border-radius: 6px;
   overflow: hidden;
-  
+  margin-bottom: 15px;    /* spacing below image */
 }
 
 .news-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;      /* ensures perfect cropping */
   display: block;
 }
+
 
 /* Headings and Date */
 .news-heading {
@@ -2381,7 +2514,7 @@ margin-bottom: 40px;
 .philosophy h1 {
   font-size: 3.2rem;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: 6px;
   font-weight: 700;
   margin-bottom: 45px;
   color: white;

@@ -36,12 +36,15 @@
 
         <div class="lang-menu">
             <div class="language-selector">
-                <select id="lang-select">
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="ar">العربية</option>
-                    <option value="pt">Português</option>
-                </select>
+                <nav class="language-list" aria-label="Language selector">
+                    <a href="#" class="lang-link" data-lang="en">EN</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="ar">AR</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="fr">FR</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="pt">PT</a>
+                </nav>
             </div>
 
             <button class="dark" onclick="window.location.href='contact.html'" data-t="btn_contact_us">
@@ -197,7 +200,7 @@
         </div>
 
     </section>
-        <footer class="footer">
+                <footer class="footer">
             <img src="media/footer.png" class="footer-background">
 
             <div class="footer-top">
@@ -225,7 +228,9 @@
                         </p>
                         <h3>DAIS SAS</h3>
                         <p>
-                            75008 Paris, France<br>
+                            60, Rue Francois 1<sup>er</sup> <br>
+                            75008<br>
+                            Paris, France<br>
                             P : +33 ( 6 ) 70443869
                         </p>
                     </div>
@@ -234,7 +239,7 @@
                         <h3>DAIS Brazil Ltd</h3>
                         <p>
                             Rua Dr. Paulo Tinoco Cabral,<br>
-                            613, Suite 14 , Ribeirão<br>
+                            613, Suite 14 , Ribeirão Preto<br>
                             São Paulo, Brazil<br>
                             P : +55 ( 16 ) 3237 2212
                         </p>
@@ -249,7 +254,7 @@
                     <div class="location-col">
                         <h3>DAIS Global SAL</h3>
                         <p>
-                            Level2 , Louis Vuitton Building<br>
+                            Level 2 , Louis Vuitton Building<br>
                             Suite 2029 , Allenby Street<br>
                             Beirut, Lebanon<br>
                             P : +961 ( 1 ) 95 76 37
@@ -267,11 +272,26 @@
             </div>
 
             <div class="newsletter">
-                <p data-t="newsletter_title">Sign up to our newsletter</p>
-                <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
-                    <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
-                    <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
-                </form>
+                <div class="newsletter-left">
+                    <p data-t="newsletter_title">Sign up to our newsletter</p>
+
+                    <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                        <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
+                        <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="newsletter-socials">
+                    <a href="https://www.linkedin.com/company/daisglobal/">
+                        <img src="media/linkedin.png" alt="">
+                    </a>
+                    <a href="https://x.com/DAIS_Global">
+                        <img src="media/xlogo.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="media/instalogo.png" alt="">
+                    </a>
+                </div>
             </div>
 
             <div class="footer-bottom">
@@ -285,11 +305,12 @@
 
         </footer>
 
+
         <section class="copyright">
             <img src="media/copyright.png" class="copyright-background">
             <p data-t="copyright">
-                © 2025 DAIS Global. All rights reserved.<br>
-                No part of this website or its content may be reproduced or used without prior written permission from DAIS Global
+                © 2025 DAIS. All rights reserved.<br>
+                No part of this website or its content may be reproduced or used without prior written permission from DAIS
             </p>
         </section>
     <script>
@@ -311,33 +332,20 @@
             }
         });
     </script>
+    <script src="translations.js"></script>
+
 <script>
-let translations = {};
+// Load translations from translations.js
+let translations = window.translations || {};
 let currentLang = localStorage.getItem("lang") || "en";
 
-/* Load translations and apply them */
-fetch("translations.json")
-  .then(res => res.json())
-  .then(data => {
-    translations = data;
-    applyTranslations();
-  });
-
-/* Set dropdown initial value */
-document.getElementById("lang-select").value = currentLang;
-
-/* When language changes */
-document.getElementById("lang-select").addEventListener("change", e => {
-  currentLang = e.target.value;
-  localStorage.setItem("lang", currentLang);
-  applyTranslations();
-});
-
-/* Apply translations to normal page elements */
+// ----------------------------
+// APPLY TRANSLATIONS
+// ----------------------------
 function applyTranslations() {
   document.querySelectorAll("[data-t]").forEach(el => {
     const key = el.getAttribute("data-t");
-    
+
     if (translations[currentLang] && translations[currentLang][key]) {
       if ("placeholder" in el) {
         el.placeholder = translations[currentLang][key];
@@ -348,26 +356,54 @@ function applyTranslations() {
   });
 }
 
-/* TEAM MODAL LOGIC */
+// ----------------------------
+// LANGUAGE SWITCHER
+// ----------------------------
+function changeLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+  applyTranslations();
+  highlightActiveLang();
+}
+
+// Highlight current language in header
+function highlightActiveLang() {
+  document.querySelectorAll(".lang-link").forEach(link => {
+    link.classList.toggle("active", link.dataset.lang === currentLang);
+  });
+}
+
+// When user clicks "EN | AR | FR | PT"
+document.querySelectorAll(".lang-link").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    changeLanguage(link.dataset.lang);
+  });
+});
+
+// ----------------------------
+// TEAM MODAL TRANSLATION
+// ----------------------------
 document.querySelectorAll(".team-member").forEach(member => {
   member.addEventListener("click", () => {
+    const h3 = member.querySelector("h3");
+    if (!h3) return;
 
-    // Extract translation key from: data-t="Abdullah_name"
-    const keyBase = member.querySelector("h3").getAttribute("data-t").replace("_name", "");
+    const baseKey = h3.getAttribute("data-t").replace("_name", "");
 
-    const img = member.querySelector("img").src;
-
-    // Fill modal with CURRENT language
-    document.getElementById("modal-img").src = img;
-    document.getElementById("modal-name").innerText = translations[currentLang][keyBase + "_name"];
-    document.getElementById("modal-title").innerText = translations[currentLang][keyBase + "_title"];
-    document.getElementById("modal-desc").innerText = translations[currentLang][keyBase + "_desc"];
+    document.getElementById("modal-img").src = member.querySelector("img").src;
+    document.getElementById("modal-name").innerText =
+      translations[currentLang][baseKey + "_name"] || "";
+    document.getElementById("modal-title").innerText =
+      translations[currentLang][baseKey + "_title"] || "";
+    document.getElementById("modal-desc").innerText =
+      translations[currentLang][baseKey + "_desc"] || "";
 
     document.getElementById("team-modal").style.display = "flex";
   });
 });
 
-/* Close modal */
+// Close modal
 document.querySelector(".team-modal-close").onclick = () => {
   document.getElementById("team-modal").style.display = "none";
 };
@@ -377,10 +413,14 @@ window.onclick = e => {
     document.getElementById("team-modal").style.display = "none";
   }
 };
+
+// ----------------------------
+// INITIAL LOAD
+// ----------------------------
+applyTranslations();
+highlightActiveLang();
 </script>
 
-
-        <script src="lang.js"></script>
-
+<!-- Load this BEFORE the script above -->
 </body>
 </html>

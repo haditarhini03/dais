@@ -36,12 +36,15 @@
 
         <div class="lang-menu">
             <div class="language-selector">
-                <select id="lang-select">
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="ar">العربية</option>
-                    <option value="pt">Português</option>
-                </select>
+                <nav class="language-list" aria-label="Language selector">
+                    <a href="#" class="lang-link" data-lang="en">EN</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="ar">AR</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="fr">FR</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="pt">PT</a>
+                </nav>
             </div>
 
             <button class="dark" onclick="window.location.href='contact.html'" data-t="btn_contact_us">
@@ -267,7 +270,9 @@
                         </p>
                         <h3>DAIS SAS</h3>
                         <p>
-                            75008 Paris, France<br>
+                            60, Rue Francois 1<sup>er</sup> <br>
+                            75008<br>
+                            Paris, France<br>
                             P : +33 ( 6 ) 70443869
                         </p>
                     </div>
@@ -276,7 +281,7 @@
                         <h3>DAIS Brazil Ltd</h3>
                         <p>
                             Rua Dr. Paulo Tinoco Cabral,<br>
-                            613, Suite 14 , Ribeirão<br>
+                            613, Suite 14 , Ribeirão Preto<br>
                             São Paulo, Brazil<br>
                             P : +55 ( 16 ) 3237 2212
                         </p>
@@ -291,7 +296,7 @@
                     <div class="location-col">
                         <h3>DAIS Global SAL</h3>
                         <p>
-                            Level2 , Louis Vuitton Building<br>
+                            Level 2 , Louis Vuitton Building<br>
                             Suite 2029 , Allenby Street<br>
                             Beirut, Lebanon<br>
                             P : +961 ( 1 ) 95 76 37
@@ -309,11 +314,26 @@
             </div>
 
             <div class="newsletter">
-                <p data-t="newsletter_title">Sign up to our newsletter</p>
-                <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
-                    <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
-                    <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
-                </form>
+                <div class="newsletter-left">
+                    <p data-t="newsletter_title">Sign up to our newsletter</p>
+
+                    <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                        <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
+                        <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="newsletter-socials">
+                    <a href="https://www.linkedin.com/company/daisglobal/">
+                        <img src="media/linkedin.png" alt="">
+                    </a>
+                    <a href="https://x.com/DAIS_Global">
+                        <img src="media/xlogo.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="media/instalogo.png" alt="">
+                    </a>
+                </div>
             </div>
 
             <div class="footer-bottom">
@@ -330,8 +350,8 @@
         <section class="copyright">
             <img src="media/copyright.png" class="copyright-background">
             <p data-t="copyright">
-                © 2025 DAIS Global. All rights reserved.<br>
-                No part of this website or its content may be reproduced or used without prior written permission from DAIS Global
+                © 2025 DAIS. All rights reserved.<br>
+                No part of this website or its content may be reproduced or used without prior written permission from DAIS
             </p>
         </section>
 
@@ -354,7 +374,9 @@
             }
         });
     </script>
+    <script src="translations.js"></script>
     <script src="lang.js"></script>
+    
 
         
 </body>

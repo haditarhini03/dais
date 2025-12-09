@@ -37,12 +37,15 @@
 
         <div class="lang-menu">
             <div class="language-selector">
-                <select id="lang-select">
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="ar">العربية</option>
-                    <option value="pt">Português</option>
-                </select>
+                <nav class="language-list" aria-label="Language selector">
+                    <a href="#" class="lang-link" data-lang="en">EN</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="ar">AR</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="fr">FR</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="lang-link" data-lang="pt">PT</a>
+                </nav>
             </div>
 
             <button class="dark" onclick="window.location.href='contact.html'" data-t="btn_contact_us">
@@ -101,7 +104,7 @@
   </div>
 </section>
 
-        <footer class="footer">
+                <footer class="footer">
             <img src="media/footer.png" class="footer-background">
 
             <div class="footer-top">
@@ -129,7 +132,9 @@
                         </p>
                         <h3>DAIS SAS</h3>
                         <p>
-                            75008 Paris, France<br>
+                            60, Rue Francois 1<sup>er</sup> <br>
+                            75008<br>
+                            Paris, France<br>
                             P : +33 ( 6 ) 70443869
                         </p>
                     </div>
@@ -138,7 +143,7 @@
                         <h3>DAIS Brazil Ltd</h3>
                         <p>
                             Rua Dr. Paulo Tinoco Cabral,<br>
-                            613, Suite 14 , Ribeirão<br>
+                            613, Suite 14 , Ribeirão Preto<br>
                             São Paulo, Brazil<br>
                             P : +55 ( 16 ) 3237 2212
                         </p>
@@ -153,7 +158,7 @@
                     <div class="location-col">
                         <h3>DAIS Global SAL</h3>
                         <p>
-                            Level2 , Louis Vuitton Building<br>
+                            Level 2 , Louis Vuitton Building<br>
                             Suite 2029 , Allenby Street<br>
                             Beirut, Lebanon<br>
                             P : +961 ( 1 ) 95 76 37
@@ -171,11 +176,26 @@
             </div>
 
             <div class="newsletter">
-                <p data-t="newsletter_title">Sign up to our newsletter</p>
-                <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
-                    <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
-                    <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
-                </form>
+                <div class="newsletter-left">
+                    <p data-t="newsletter_title">Sign up to our newsletter</p>
+
+                    <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                        <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
+                        <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="newsletter-socials">
+                    <a href="https://www.linkedin.com/company/daisglobal/">
+                        <img src="media/linkedin.png" alt="">
+                    </a>
+                    <a href="https://x.com/DAIS_Global">
+                        <img src="media/xlogo.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="media/instalogo.png" alt="">
+                    </a>
+                </div>
             </div>
 
             <div class="footer-bottom">
@@ -189,11 +209,12 @@
 
         </footer>
 
+
         <section class="copyright">
             <img src="media/copyright.png" class="copyright-background">
             <p data-t="copyright">
-                © 2025 DAIS Global. All rights reserved.<br>
-                No part of this website or its content may be reproduced or used without prior written permission from DAIS Global
+                © 2025 DAIS. All rights reserved.<br>
+                No part of this website or its content may be reproduced or used without prior written permission from DAIS
             </p>
         </section>
 
@@ -217,115 +238,7 @@
             }
         });
     </script>
-        <script src="lang.js"></script>
-4
-<script>
-    let serviceData = {};
-let activeLang = localStorage.getItem("lang") || "en";
-
-const thumbs = document.querySelectorAll(".thumb");
-const mainImage = document.getElementById("active-service");
-const title = document.getElementById("service-title");
-const details = document.getElementById("service-details");
-const description = document.querySelector(".service-description");
-
-// Load multilingual services.json
-async function loadServices() {
-  try {
-    const res = await fetch("services.json");
-    serviceData = await res.json();
-
-    // Refresh language from storage
-    activeLang = localStorage.getItem("lang") || "en";
-
-    initDefaultService();
-  } catch (err) {
-    console.error("Error loading services.json", err);
-  }
-}
-
-// Mapping service categories to section keys in the JSON
-const serviceKeys = {
-  consulting: ["service_consulting_1", "service_consulting_2", "service_consulting_3"],
-  digital: ["service_digital_1", "service_digital_2", "service_digital_3"],
-  tech: ["service_tech_1", "service_tech_2", "service_tech_3"],
-  project: ["service_project_1", "service_project_2", "service_project_3"]
-};
-
-// Render selected service data
-function setActiveService(key, imgSrc) {
-  const langBlock = serviceData[activeLang];
-  if (!langBlock || !serviceKeys[key]) return;
-
-  // Main service title (e.g., "service_consulting_title")
-  const mainTitleKey = `service_${key}_title`;
-  title.textContent = langBlock[mainTitleKey] || "";
-
-  // Build full section HTML
-  let html = "";
-  serviceKeys[key].forEach(sectionKey => {
-    const heading = langBlock[`${sectionKey}_title`] || "";
-    const descriptionText = langBlock[`${sectionKey}_desc`] || "";
-    const points = langBlock[`${sectionKey}_points`] || [];
-
-    html += `
-      <h2>${heading}</h2>
-      <p>${descriptionText}</p>
-      <ul>
-        ${points.map(p => `<li>${p}</li>`).join("")}
-      </ul>
-    `;
-  });
-
-  details.innerHTML = html;
-
-  // Update main image
-  mainImage.src = imgSrc;
-
-  // Highlight active thumbnail
-  thumbs.forEach(t => t.classList.remove("active"));
-  document.querySelector(`.thumb[data-service="${key}"]`).classList.add("active");
-}
-
-// Initialize default displayed service
-function initDefaultService() {
-  const firstThumb = thumbs[0];
-  if (!firstThumb) return;
-
-  const key = firstThumb.dataset.service;
-  const imgSrc = firstThumb.dataset.img;
-
-  setActiveService(key, imgSrc);
-}
-
-// Handle click on thumbnails
-thumbs.forEach(thumb => {
-  thumb.addEventListener("click", () => {
-    const key = thumb.dataset.service;
-    const imgSrc = thumb.dataset.img;
-
-    description.classList.add("fade-out");
-
-    setTimeout(() => {
-      setActiveService(key, imgSrc);
-      description.classList.remove("fade-out");
-      description.classList.add("fade-in");
-
-      setTimeout(() => description.classList.remove("fade-in"), 400);
-    }, 300);
-  });
-});
-
-// Listen for language change (refresh page)
-document.getElementById("lang-select")?.addEventListener("change", event => {
-  localStorage.setItem("lang", event.target.value);
-  location.reload();
-});
-
-// Start loading
-loadServices();
-
-</script>
+  
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -403,6 +316,114 @@ loadServices();
         });
         });
     </script>
+<script src="translations.js"></script>
+<script src="lang.js"></script>
+<script>
+let activeLang = localStorage.getItem("lang") || "en";
+
+// serviceData now comes from services.js (no fetch needed)
+let serviceData = window.serviceData;
+
+const thumbs = document.querySelectorAll(".thumb");
+const mainImage = document.getElementById("active-service");
+const title = document.getElementById("service-title");
+const details = document.getElementById("service-details");
+const description = document.querySelector(".service-description");
+
+// Keys inside the services file
+const serviceKeys = {
+  consulting: ["service_consulting_1", "service_consulting_2", "service_consulting_3"],
+  digital: ["service_digital_1", "service_digital_2", "service_digital_3"],
+  tech: ["service_tech_1", "service_tech_2", "service_tech_3"],
+  project: ["service_project_1", "service_project_2", "service_project_3"]
+};
+
+// Render a service category
+function setActiveService(key, imgSrc) {
+  const langBlock = serviceData[activeLang];
+  if (!langBlock || !serviceKeys[key]) return;
+
+  // Main title
+  const mainTitleKey = `service_${key}_title`;
+  title.textContent = langBlock[mainTitleKey] || "";
+
+  // Sections
+  let html = "";
+  serviceKeys[key].forEach(sectionKey => {
+    const heading = langBlock[`${sectionKey}_title`] || "";
+    const desc = langBlock[`${sectionKey}_desc`] || "";
+    const points = langBlock[`${sectionKey}_points`] || [];
+
+    html += `
+      <h2>${heading}</h2>
+      <p>${desc}</p>
+      <ul>
+        ${points.map(p => `<li>${p}</li>`).join("")}
+      </ul>
+    `;
+  });
+
+  details.innerHTML = html;
+
+  // Update image
+  mainImage.src = imgSrc;
+
+  // Highlight selected thumbnail
+  thumbs.forEach(t => t.classList.remove("active"));
+  document.querySelector(`.thumb[data-service="${key}"]`).classList.add("active");
+}
+
+// Default load
+function initDefaultService() {
+  const firstThumb = thumbs[0];
+  if (!firstThumb) return;
+
+  const key = firstThumb.dataset.service;
+  const img = firstThumb.dataset.img;
+
+  setActiveService(key, img);
+}
+
+// Thumbnail click behavior
+thumbs.forEach(thumb => {
+  thumb.addEventListener("click", () => {
+    const key = thumb.dataset.service;
+    const img = thumb.dataset.img;
+
+    // fade-out transition
+    description.classList.add("fade-out");
+
+    setTimeout(() => {
+      setActiveService(key, img);
+      description.classList.remove("fade-out");
+      description.classList.add("fade-in");
+
+      setTimeout(() => description.classList.remove("fade-in"), 400);
+    }, 300);
+
+    // ✅ SCROLL TO TOP OF SERVICES SECTION (restored)
+    const section = document.querySelector(".services-section");
+    if (section) {
+      const headerOffset = 60; 
+      const top = section.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
+// Reload on language change
+document.getElementById("lang-select")?.addEventListener("change", event => {
+  localStorage.setItem("lang", event.target.value);
+  location.reload();
+});
+
+// Initialize
+initDefaultService();
+</script>
 
 </body>
 

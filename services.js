@@ -1,4 +1,4 @@
-{
+window.serviceData ={
   "en": {
     "services_hero_title": "Our Services",
 
