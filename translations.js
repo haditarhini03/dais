@@ -110,6 +110,88 @@ window.translations ={
     "filter_energy": "Energy",
     "filter_agriculture": "Agriculture",
     "client":"Client",
+  "label_client": "Client:",
+
+  "project_title1": "Structuring of Concessions for Municipal Solid Waste Management",
+  "project_client1": "Government of Goiás / BNDES",
+
+  "project_title2": "Independent Technical Evaluation of the Energy Recovery Project of MSW / URE Barueri",
+  "project_client2": "Deloitte Touche Tohmatsu",
+
+  "project_title3": "Technical Advisory for Digitalization & Recycling LLP – Kazakhstan",
+  "project_client3": "EBRD",
+
+  "project_title4": "Technical & Economic Feasibility Study – Rio de Janeiro",
+  "project_client4": "SIMPAR Group",
+
+  "project_title5": "EU–Brazil Policy Dialogue on Methane Reductions",
+  "project_client5": "EU / GIZ",
+
+  "project_title6": "Violations and Fines Schedule – Saudi Arabia",
+  "project_client6": "MWAN",
+
+  "project_title7": "Technical Assistance for Circular Economy Projects",
+  "project_client7": "LCBA / IDOM, Brazil",
+
+  "project_title8": "EPR System for Tyres, Batteries & Single-Use Plastics – KSA",
+  "project_client8": "MWAN / DORNIER Consulting & Engineering",
+
+  "project_title9": "Waste Segregation at Source Program",
+  "project_client9": "MoMAH / DORNIER Consulting & Engineering",
+
+  "project_title10": "Design of Waste E-manifest System",
+  "project_client10": "MWAN / MSI",
+
+  "project_title11": "Licensing & Permitting System for Waste Sector – KSA",
+  "project_client11": "MWAN / APPLUS",
+
+  "project_title12": "Optimization of Government Spending on Waste Management",
+  "project_client12": "Ministry of Finance / Confidential",
+
+  "project_title13": "PMO Support for the Green KSA Project",
+  "project_client13": "NCVC / DORNIER Consulting & Engineering",
+
+  "project_title14": "Operational Services for Establishment of HSE Department",
+  "project_client14": "NCVC / DORNIER Consulting & Engineering",
+
+  "project_title15": "Technical & Management Support for Desertification & Drought",
+  "project_client15": "NCVC / DORNIER Consulting & Engineering",
+
+  "project_title16": "Pre-Licensing Inspection System – Riyadh",
+  "project_client16": "REMAT Al-Riyadh / APPLUS",
+
+  "project_title17": "Investment Opportunities Study – South Africa & SADC",
+  "project_client17": "DBSA / BMI Research",
+
+  "project_title18": "Quality Assurance System for City Cleaning – KSA",
+  "project_client18": "MoMAH / APPLUS",
+
+  "project_title19": "Sewage Treatment Plant Location Study – Brazil",
+  "project_client19": "Harald Industria e Comercio de Alimentos S/A",
+
+  "project_title20": "Regulatory & Market Study for Biomethane & Carbon Credits",
+  "project_client20": "SUMITOMO Corporation",
+
+  "project_title21": "Wood Pellets Production Feasibility Study – Amazon Region",
+  "project_client21": "Ministry of Environment / ICMBio / Brazilian Forest Service",
+
+  "project_title22": "Enhancing Plant Production Capacity",
+  "project_client22": "Hailey Plant Tissue Culture Labs, Sri Lanka",
+
+  "project_title23": "Design & Development of Plantform Bioreactor",
+  "project_client23": "Swedish Agricultural University",
+
+  "project_title24": "Technical Advisory Services",
+  "project_client24": "Gadera Ltd & Fitzgerald Nurseries",
+
+  "project_title25": "Hydroponic & Aeroponic Systems for Mini Tuber Production",
+  "project_client25": "Gadera Ltd & Fitzgerald Nurseries",
+
+  "project_title26": "Plant Intellectual Rights Project (EU)",
+  "project_client26": "Sheffield University",
+
+  "project_title27": "Sweet Potato Protocol Development",
+  "project_client27": "Fitzgerald Nurseries, Europe",
 
     "team_title":"Team Members",
     "team_h1": "Team",
@@ -308,6 +390,88 @@ window.translations ={
     "filter_energy": "Énergie",
     "filter_agriculture": "Agriculture",
     "client":"Client",
+ "label_client": "Client :", 
+
+  "project_title1": "Structuration de concessions pour la gestion des déchets solides municipaux dans l’État de Goiás",
+  "project_client1": "Gouvernement de l’État de Goiás / BNDES",
+
+  "project_title2": "Évaluation technique indépendante du projet de valorisation énergétique des déchets municipaux – URE Barueri",
+  "project_client2": "Deloitte Touche Tohmatsu",
+
+  "project_title3": "Conseil technique pour le projet de digitalisation et de recyclage au Kazakhstan",
+  "project_client3": "Banque européenne pour la reconstruction et le développement (BERD)",
+
+  "project_title4": "Étude de faisabilité technique et économique – Rio de Janeiro",
+  "project_client4": "SIMPAR Group",
+
+  "project_title5": "Dialogue politique UE–Brésil sur la réduction des émissions de méthane",
+  "project_client5": "Union européenne / GIZ",
+
+  "project_title6": "Élaboration d’un barème des infractions et sanctions pour le secteur des déchets en Arabie saoudite",
+  "project_client6": "Centre national de gestion des déchets",
+
+  "project_title7": "Assistance technique pour des projets d’économie circulaire",
+  "project_client7": "Programme LCBA / Union européenne / IDOM",
+
+  "project_title8": "Système de responsabilité élargie du producteur pour pneus, batteries et plastiques à usage unique – Arabie saoudite",
+  "project_client8": "Centre national de gestion des déchets / DORNIER",
+
+  "project_title9": "Programme de tri des déchets à la source",
+  "project_client9": "Ministère des Affaires municipales et du Logement / DORNIER",
+
+  "project_title10": "Conception du système E-Manifest pour le secteur des déchets",
+  "project_client10": "Centre national de gestion des déchets / MSI",
+
+  "project_title11": "Système de licences et permis pour le secteur des déchets – Arabie saoudite",
+  "project_client11": "Centre national de gestion des déchets / APPLUS",
+
+  "project_title12": "Optimisation des dépenses publiques dans la gestion des déchets",
+  "project_client12": "Ministère des Finances / Confidentiel",
+
+  "project_title13": "Soutien PMO pour l’initiative Green Saudi (10 milliards d’arbres)",
+  "project_client13": "NCVC / DORNIER",
+
+  "project_title14": "Services opérationnels pour la création d’un département HSE",
+  "project_client14": "NCVC / DORNIER",
+
+  "project_title15": "Appui technique et administratif pour la lutte contre la désertification et la sécheresse",
+  "project_client15": "NCVC / DORNIER",
+
+  "project_title16": "Système d’inspection préalable à la délivrance de licences – Riyad",
+  "project_client16": "REMAT Riyadh / APPLUS",
+
+  "project_title17": "Étude des opportunités d’investissement – Afrique du Sud et SADC",
+  "project_client17": "DBSA / BMI Research",
+
+  "project_title18": "Système d’assurance qualité pour les services de propreté urbaine",
+  "project_client18": "Ministère des Affaires municipales / APPLUS",
+
+  "project_title19": "Étude d’implantation d’une station de traitement des eaux usées – Brésil",
+  "project_client19": "Harald Industria e Comercio de Alimentos",
+
+  "project_title20": "Étude réglementaire et de marché sur le biométhane et les crédits carbone",
+  "project_client20": "SUMITOMO Corporation",
+
+  "project_title21": "Étude de faisabilité pour la production de granulés de bois – Amazonie",
+  "project_client21": "Service forestier brésilien / ICMBio",
+
+  "project_title22": "Renforcement des capacités de production végétale",
+  "project_client22": "Hailey Plant Tissue Culture Labs – Sri Lanka",
+
+  "project_title23": "Conception et développement d’un bioréacteur Plantform",
+  "project_client23": "Université suédoise des sciences agricoles",
+
+  "project_title24": "Services de conseil technique",
+  "project_client24": "Gadera Ltd & Fitzgerald Nurseries",
+
+  "project_title25": "Systèmes hydroponiques et aéroponiques pour la production de mini-tubercules",
+  "project_client25": "Gadera Ltd & Fitzgerald Nurseries",
+
+  "project_title26": "Projet européen sur les droits de propriété intellectuelle des plantes",
+  "project_client26": "Université de Sheffield",
+
+  "project_title27": "Développement de protocoles pour la patate douce",
+  "project_client27": "Fitzgerald Nurseries",
 
     "team_title":"Membres de l'Équipe",
     "team_h1": "Équipe",
@@ -410,7 +574,7 @@ window.translations ={
     "services_title": "خدماتنا",
     "services_btn_more": "اعرف المزيد",
 
-    "about_title": "DAIS عن ",
+    "about_title": "عن دايس",
     "about_btn_more": "اعرف المزيد",
     "service1_title": "تطوير المشاريع",
     "service1_desc": "تطوير المشاريع<br>حلول التمويل<br>EPC دعم ",
@@ -434,11 +598,11 @@ window.translations ={
     "newsletter_placeholder": "بريدك الإلكتروني",
     "newsletter_btn": "اشتراك",
 
-    "about_p1": "تقدم مجموعة DAIS مجموعة شاملة من الخدمات والمنتجات والحلول في قطاعات البيئة وإدارة النفايات وتطوير المدن والطاقة والزراعة.",
+    "about_p1": "تقدم مجموعة دايس مجموعة شاملة من الخدمات والمنتجات والحلول في قطاعات البيئة وإدارة النفايات وتطوير المدن والطاقة والزراعة.",
     "about_p2": "نحن ننشئ مركزا عالميا واحدا لجميع خدمات الاستشارات والهندسة والحلول الرقمية والمنتجات التكنولوجية وحلول تطوير البنية التحتية.",
     "about_p3": "نقدم المشورة لعملائنا في المشاريع المعقدة ونطبق تقنيات جديدة في قطاعات البيئة وإدارة النفايات وتطوير المدن والطاقة والزراعة.",
     "about_p4": "نلتزم بتقديم حلول شاملة ومستدامة عبر مختلف الصناعات ونقدم خدماتنا للقطاعين العام والخاص والمنظمات الدولية.",
-    "about_p5": "في مجموعة DAIS، عملاؤنا هم أولويتنا. نسعى دائما لتحقيق رضا العملاء والحفاظ على التطوير المستمر لضمان المشاركة والتكامل. نربط نجاحنا بنجاح عملائنا.",
+    "about_p5": "في مجموعة دايس، عملاؤنا هم أولويتنا. نسعى دائما لتحقيق رضا العملاء والحفاظ على التطوير المستمر لضمان المشاركة والتكامل. نربط نجاحنا بنجاح عملائنا.",
 
     "sectors_title": "قطاعاتنا",
     "sector_energy": "الطاقة",
@@ -481,12 +645,12 @@ window.translations ={
 
     "philosophy_title": "فلسفتنا",
     "philo_p1": "“DAIS” كلمة ذات أصل لاتيني وتعني منصة مرتفعة.",
-    "philo_p2": "DAIS هي أيضا اختصار لـ Digital و Analytics و Insights و Solutions. توفر DAIS منصة لخدمة العملاء حول العالم من خلال توفير رؤى محلية وتطوير حلول مخصصة.",
-    "philo_p3": "تنوع DAIS أنشطتها وعملياتها ضمن أربعة مسارات عمل عبر مجموعة متنوعة من القطاعات:",
+    "philo_p2": "دايس هي أيضا اختصار لـ Digital و Analytics و Insights و Solutions. توفر دايس منصة لخدمة العملاء حول العالم من خلال توفير رؤى محلية وتطوير حلول مخصصة.",
+    "philo_p3": "تنوع دايس أنشطتها وعملياتها ضمن أربعة مسارات عمل عبر مجموعة متنوعة من القطاعات:",
     "philo_p4": "الاستشارات والهندسة، الحلول الرقمية، المنتجات التكنولوجية، وتطوير مشاريع البنية التحتية.",
-    "philo_p5": "ارتبط اسم DAIS بالثقة والخبرة مما عزز جودة الخدمات والمنتجات والحلول المقدمة.",
+    "philo_p5": "ارتبط اسم دايس بالثقة والخبرة مما عزز جودة الخدمات والمنتجات والحلول المقدمة.",
 
-    "group_title": "مجموعة DAIS",
+    "group_title": "مجموعة دايس",
 
     "innov_title": "نبتكر من أجل مستقبل أكثر ذكاءً وخضرة",
     "innov_p1": "نقوم ببناء عمليات فعّالة وموحدة تعزز الابتكار وتضمن النجاح.",
@@ -504,6 +668,88 @@ window.translations ={
     "filter_energy": "الطاقة",
     "filter_agriculture": "الزراعة",
     "client":"العميل",
+"label_client": "الجهة المستفيدة:",
+
+  "project_title1": "هيكلة عقود الامتياز لإدارة النفايات البلدية الصلبة في ولاية غوياس",
+  "project_client1": "حكومة ولاية غوياس / بنك التنمية الاقتصادي والاجتماعي البرازيلي<br>(BNDES)",
+
+  "project_title2": "التقييم الفني المستقل لمشروع استرداد الطاقة من النفايات البلدية الصلبة – وحدة بارويري",
+  "project_client2": "شركة ديلويت توش توهماتسو",
+
+  "project_title3": "الخدمات الاستشارية الفنية لمشروع الرقمنة وإعادة التدوير في جمهورية كازاخستان",
+  "project_client3": "البنك الأوروبي لإعادة الإعمار والتنمية<br>(EBRD)",
+
+  "project_title4": "الدراسة الفنية والاقتصادية لإدارة النفايات البلدية الصلبة في ريو دي جانيرو",
+  "project_client4": "مجموعة سيمبار<br>(SIMPAR Group)",
+
+  "project_title5": "الحوار السياسي بين الاتحاد الأوروبي والبرازيل حول خفض انبعاثات الميثان",
+  "project_client5": "الاتحاد الأوروبي / المؤسسة الألمانية للتعاون الدولي<br>(GIZ)",
+
+  "project_title6": "إعداد جدول تصنيف المخالفات والغرامات لقطاع إدارة النفايات في المملكة العربية السعودية",
+  "project_client6": "المركز الوطني لإدارة النفايات",
+
+  "project_title7": "الدعم الفني لمشاريع الاقتصاد الدائري",
+  "project_client7": "برنامج الاقتصاد المنخفض الكربون والدائري<br>(LCBA) <br>/ الاتحاد الأوروبي / شركة<br>IDOM",
+
+  "project_title8": "تصميم نظام مسؤولية المنتج الممتدة للإطارات والبطاريات والمنتجات البلاستيكية ذات الاستخدام الواحد في المملكة العربية السعودية",
+  "project_client8": "المركز الوطني لإدارة النفايات / شركة دورنير للاستشارات الهندسية",
+
+  "project_title9": "تطوير برنامج فرز النفايات البلدية الصلبة من المصدر",
+  "project_client9": "وزارة البلديات والإسكان / شركة دورنير للاستشارات",
+
+  "project_title10": "تصميم منظومة وثيقة النقل الإلكترونية (E-Manifest) لقطاع إدارة النفايات في المملكة العربية السعودية",
+  "project_client10": "المركز الوطني لإدارة النفايات / شركة موبايـل سيستمز إنترناشونال",
+
+  "project_title11": "تصميم وتطوير نظام التراخيص والتصاريح لقطاع إدارة النفايات في المملكة العربية السعودية",
+  "project_client11": "المركز الوطني لإدارة النفايات / شركة أيبلس (APPLUS)",
+
+  "project_title12": "تحسين كفاءة الإنفاق الحكومي في قطاع إدارة النفايات",
+  "project_client12": "وزارة المالية / جهة سرية",
+
+  "project_title13": "تأسيس مكتب إدارة المشاريع لمبادرة السعودية الخضراء (زراعة 10 مليارات شجرة)",
+  "project_client13": "المركز الوطني لتنمية الغطاء النباتي ومكافحة التصحر / شركة دورنير",
+
+  "project_title14": "الخدمات الاستشارية والتشغيلية لإنشاء إدارة الصحة والسلامة والبيئة (HSE)",
+  "project_client14": "المركز الوطني لتنمية الغطاء النباتي ومكافحة التصحر / شركة دورنير",
+
+  "project_title15": "الدعم الفني والإداري لمشاريع مكافحة التصحر والحد من الجفاف",
+  "project_client15": "المركز الوطني لتنمية الغطاء النباتي ومكافحة التصحر / شركة دورنير",
+
+  "project_title16": "الدعم الفني لتصميم نظام التفتيش قبل الترخيص في مدينة الرياض",
+  "project_client16": "ريمات الرياض / شركة أيبلس",
+
+  "project_title17": "تقييم الفرص والفجوات الاستثمارية في جنوب أفريقيا ومجموعة تنمية أفريقيا الجنوبية (SADC)",
+  "project_client17": "بنك التنمية لجنوب أفريقيا / BMI Research",
+
+  "project_title18": "تصميم وتنفيذ نظام ضمان الجودة لخدمات نظافة المدن في المملكة العربية السعودية",
+  "project_client18": "وزارة البلديات والإسكان / شركة أيبلس",
+
+  "project_title19": "دراسة تحديد موقع إنشاء محطة معالجة مياه الصرف الصحي – البرازيل",
+  "project_client19": "شركة هارالد للصناعة والتجارة للأغذية",
+
+  "project_title20": "الدراسة التنظيمية ودراسة السوق للميثان الحيوي واعتمادات الكربون",
+  "project_client20": "شركة سوميتومو",
+
+  "project_title21": "دراسة الجدوى لإنتاج كريات الخشب في منطقة الأمازون",
+  "project_client21": "مصلحة الغابات البرازيلية / معهد تشيكو مينديز",
+
+  "project_title22": "تقديم خدمات استشارية لزيادة القدرة الإنتاجية النباتية",
+  "project_client22": "مختبرات زراعة الأنسجة النباتية هايلي – سريلانكا",
+
+  "project_title23": "تصميم وتطوير مفاعل حيوي Plantform للزراعة النسيجية",
+  "project_client23": "الجامعة السويدية للعلوم الزراعية",
+
+  "project_title24": "تقديم خدمات استشارية فنية",
+  "project_client24": "مشاتل Gadera وFitzgerald – أيرلندا",
+
+  "project_title25": "تطوير أنظمة الزراعة المائية والهوائية لإنتاج الدرنات المصغّرة",
+  "project_client25": "مشاتل Gadera وFitzgerald – أيرلندا",
+
+  "project_title26": "مشروع حقوق الملكية الفكرية للنباتات (الاتحاد الأوروبي)",
+  "project_client26": "جامعة شيفيلد – المملكة المتحدة",
+
+  "project_title27": "تطوير بروتوكولات إنتاج وتسويق البطاطا الحلوة",
+  "project_client27": "مشاتل Fitzgerald – أوروبا",
 
     "team_title":"أعضاء الفريق",
     "team_h1": "الفريق",
@@ -518,11 +764,11 @@ window.translations ={
 
     "team_mohamad_name": "المهندس محمد ترحيني",
     "team_mohamad_title": "الشريك الإداري",
-    "team_mohamad_desc": "يتمتّع المهندس محمد ترحيني بأكثر من عشرين عاماً من الخبرة في الهندسة والاستشارات والتنمية المستدامة، مع سجل مثبت في تحويل الأفكار إلى مشاريع ملموسة ذات تأثير حقيقي. بصفته المؤسس والشريك الإداري لمجموعة DAIS، يقود منصة متكاملة تقدّم مجموعة شاملة من الخدمات والمنتجات والحلول في قطاعات البيئة والطاقة والزراعة. خلال مسيرته المهنية، قدّم محمد المشورة للحكومات والمنظمات الدولية والقطاع الخاص في مجالات الإصلاح المؤسساتي، تطوير السياسات، والمشاريع البنيوية—خصوصاً في خدمات البلديات، إدارة النفايات، الموارد الطبيعية، والاستدامة. يركز عمله على بناء أطر فعالة تربط بين الابتكار والحفاظ على البيئة والنمو الاقتصادي. يحمل محمد ماجستيراً أوروبياً في إدارة مشاريع هندسة الطاقة والبيئة من مدرسة المناجم في فرنسا، المعهد الملكي للتكنولوجيا في السويد، وجامعة مدريد التقنية في إسبانيا، بالإضافة إلى بكالوريوس في الهندسة الكهربائية من الجامعة الأمريكية في بيروت. وهو معتمد كخبير في تمويل التكيف المناخي، ومدير مشاريع محترف، ومدير نفايات دولي (ISWA).",
+    "team_mohamad_desc": "يتمتّع م. محمد ترحيني بخبرة تمتد لأكثر من عقدين في مجالات الهندسة والاستشارات والتنمية المستدامة، مع سجل حافل في تحويل الأفكار إلى مشاريع ملموسة ذات أثر فعّال. بصفته المؤسس والشريك الإداري لمجموعة دايس، يقود منصة متكاملة تقدّم مجموعة شاملة من الخدمات والمنتجات والحلول في قطاعات البيئة والطاقة والزراعة. على مدار مسيرته المهنية، قدّم م. ترحيني الاستشارات للحكومات والمنظمات الدولية والقطاع الخاص في مجالات التطوير المؤسسي وتطوير السياسات وتنفيذ مشاريع البنية التحتية، ولا سيّما في مجالات الخدمات البلدية وإدارة النفايات والموارد الطبيعية والاستدامة. ويركّز عمله على بناء أطر فعّالة تجمع بين الابتكار وحماية البيئة والتنمية الاقتصادية. يحمل م. محمد ترحيني درجة الماجستير في إدارة مشاريع هندسة الطاقة والبيئة من جامعة École des Mines في فرنسا والمعهد الملكي للتكنولوجيا في السويد (KTH) وجامعة البوليتكنيك في مدريد (UPM)، بالإضافة إلى درجة البكالوريوس في الهندسة الكهربائية من الجامعة الأمريكية في بيروت. كما أنه خبير معتمد في تمويل التكيّف المناخي، ومحترف معتمد في إدارة المشاريع (PMP) ومدير دولي معتمد في إدارة النفايات.", 
 
     "team_flavio_name": "المهندس فلافيو ماتوس",
     "team_flavio_title": "الشريك الإداري",
-    "team_flavio_desc": "يمتلك المهندس فلافيو ماتوس أكثر من عشرين عاماً من الخبرة الدولية في الهندسة والاستشارات، مع خلفية قوية في تطوير وتمويل مشاريع بيئية وطاقة واسعة النطاق. بصفته شريكاً إدارياً في مجموعة DAIS، يقود مبادرات استراتيجية تجمع بين التميز الهندسي والاستدامة، مع التركيز على إدارة النفايات، استرداد الطاقة، وكفاءة الموارد عبر الأسواق العالمية. شغل فلافيو خلال مسيرته عدة مناصب قيادية، بما في ذلك مدير تقني-تجاري، مدير تطوير المشاريع والتمويل، وعضو مجلس إدارة في ثلاث شركات ذات غرض خاص (SPEs) في المملكة المتحدة. وهو عضو مجلس إدارة في ABREN ونائب رئيس WtERT وعضو نشط في عدة مجموعات عمل ضمن ISWA. يحمل فلافيو شهادات في الهندسة الميكانيكية، هندسة التخطيط، وإدارة الأعمال، بالإضافة إلى درجتي ماجستير في إدارة الأعمال (إسبانيا) والهندسة البيئية والطاقة (فرنسا). كما يحمل شهادة دراسات عليا في تمويل المشاريع (المملكة المتحدة) وهو معتمد كمدير نفايات دولي من ISWA.",
+    "team_flavio_desc": "يتمتّع م. فلافيو ماتوس بخبرة دولية تمتد لأكثر من عقدين في مجالي الهندسة والاستشارات، مع خبرة قوية في تطوير وتمويل المشاريع البيئية ومشاريع الطاقة الكبرى. بصفته الشريك الإداري في مجموعة دايس، يقود مبادرات استراتيجية تجمع بين التميّز الهندسي والاستدامة، مع تركيز على إدارة النفايات واسترداد الطاقة وكفاءة استخدام الموارد. على مدار مسيرته المهنية، شغل م. ماتوس مناصب قيادية رئيسية، منها مدير التطوير الفني والتجاري، ومدير تطوير المشاريع والتمويل، وعضو مجلس إدارة ثلاث شركات ذات غرض خاص في المملكة المتحدة. كما يشغل فلافيو منصب عضو مجلس إدارة في ABREN ونائب رئيس WtERT، وهو عضو فاعل في عدد من فرق العمل التابعة للمنظمة الدولية لإدارة النفايات (ISWA). يحمل م. فلافيو ماتوس درجات البكالوريوس في الهندسة الميكانيكية، وهندسة التخطيط، وإدارة الأعمال، إضافةً إلى درجتي ماجستير في إدارة الأعمال (إسبانيا) والهندسة البيئية والطاقة (فرنسا). كما يحمل شهادة دراسات عليا في تمويل المشاريع (المملكة المتحدة)، وهو مدير دولي معتمد في إدارة النفايات.",
 
     "team_rodrigo_name": "السيد رودريغو أوليفيرا",
     "team_rodrigo_title": "القطاع التجاري والمبيعات",
@@ -556,7 +802,7 @@ window.translations ={
     "cookies_manage_desc": "يمكنك التحكم في ملفات الارتباط من خلال إعدادات المتصفح. قد يؤثر تعطيلها على وظائف الموقع.",
 
         "privacy_title": "سياسة الخصوصية",
-    "privacy_intro": "خصوصيتك مهمة بالنسبة لنا. توضح هذه السياسة كيفية جمع DAIS لمعلوماتك واستخدامها.",
+    "privacy_intro": "خصوصيتك مهمة بالنسبة لنا. توضح هذه السياسة كيفية جمع دايس لمعلوماتك واستخدامها.",
     "privacy_info_collect_title": "1. المعلومات التي نجمعها",
     "privacy_info_collect_desc": "نجمع معلومات شخصية مثل الأسماء والبريد الإلكتروني عند الاشتراك في النشرة البريدية أو عند إرسال النماذج.",
     "privacy_use_title": "2. كيفية استخدام المعلومات",
@@ -567,17 +813,17 @@ window.translations ={
     "privacy_contact_desc": "لأي استفسارات متعلقة بالخصوصية، يرجى التواصل معنا عبر info@dais-global.com.",
 
     "terms_title": "الشروط والأحكام",
-    "terms_intro": "مرحبًا بكم في موقع DAIS. من خلال الوصول إلى موقعنا أو استخدامه، فإنك توافق على هذه الشروط.",
+    "terms_intro": "مرحبًا بكم في موقع دايس. من خلال الوصول إلى موقعنا أو استخدامه، فإنك توافق على هذه الشروط.",
     "terms_use_title": "1. استخدام الموقع",
     "terms_use_text": "يتم توفير هذا الموقع لأغراض المعلومات فقط. توافق على عدم إساءة استخدام الموقع أو الانخراط في أي نشاط غير قانوني.",
     "terms_ip_title": "2. الملكية الفكرية",
-    "terms_ip_text": "جميع الشعارات والمحتوى والمواد مملوكة لـ DAIS. لا يجوز لك إعادة الإنتاج أو إعادة التوزيع بدون إذن.",
+    "terms_ip_text": "جميع الشعارات والمحتوى والمواد مملوكة لـ دايس. لا يجوز لك إعادة الإنتاج أو إعادة التوزيع بدون إذن.",
     "terms_liability_title": "3. المسؤولية",
     "terms_liability_text": "نحن غير مسؤولين عن أي خسائر ناتجة عن استخدامك لهذا الموقع.",
     "terms_changes_title": "4. التغييرات",
     "terms_changes_text": "قد نقوم بتحديث هذه الشروط بشكل دوري، والاستخدام المستمر للموقع يعني قبولك لهذه التغييرات.",
     "principles_title": "مبادئنا",
-    "principles_intro": "تعمل DAIS وفق المبادئ التوجيهية التالية:",
+    "principles_intro": "تعمل دايس وفق المبادئ التوجيهية التالية:",
     "principles_integrity_title": "النزاهة:",
     "principles_integrity_text": "نبني كل علاقة على الشفافية والمساءلة والثقة.",
     "principles_innovation_title": "الابتكار:",
@@ -701,7 +947,89 @@ window.translations ={
     "filter_energy": "Energia",
     "filter_agriculture": "Agricultura",
     "client":"Cliente",
+ "label_client": "Cliente:",
 
+  "project_title1": "Estruturação de concessões para a gestão de resíduos sólidos urbanos no Estado de Goiás",
+  "project_client1": "Governo do Estado de Goiás / BNDES",
+
+  "project_title2": "Avaliação técnica independente do projeto de recuperação energética de resíduos – URE Barueri",
+  "project_client2": "Deloitte Touche Tohmatsu",
+
+  "project_title3": "Assessoria técnica para o projeto de digitalização e reciclagem no Cazaquistão",
+  "project_client3": "Banco Europeu para a Reconstrução e o Desenvolvimento (BERD)",
+
+  "project_title4": "Estudo de viabilidade técnica e econômica – Rio de Janeiro",
+  "project_client4": "SIMPAR Group",
+
+  "project_title5": "Diálogo político UE–Brasil sobre a redução das emissões de metano",
+  "project_client5": "União Europeia / GIZ",
+
+  "project_title6": "Elaboração de tabela de infrações e penalidades para o setor de resíduos na Arábia Saudita",
+  "project_client6": "Centro Nacional de Gestão de Resíduos",
+
+  "project_title7": "Assistência técnica para projetos de economia circular",
+  "project_client7": "Programa LCBA / União Europeia / IDOM",
+
+  "project_title8": "Sistema de responsabilidade estendida do produtor para pneus, baterias e plásticos descartáveis",
+  "project_client8": "Centro Nacional de Gestão de Resíduos / DORNIER",
+
+  "project_title9": "Programa de segregação de resíduos na origem",
+  "project_client9": "Ministério dos Assuntos Municipais e Habitação / DORNIER",
+
+  "project_title10": "Projeto do sistema E-Manifest para o setor de resíduos",
+  "project_client10": "Centro Nacional de Gestão de Resíduos / MSI",
+
+  "project_title11": "Sistema de licenciamento e permissões para o setor de resíduos",
+  "project_client11": "Centro Nacional de Gestão de Resíduos / APPLUS",
+
+  "project_title12": "Otimização dos gastos públicos com gestão de resíduos",
+  "project_client12": "Ministério das Finanças / Confidencial",
+
+  "project_title13": "Apoio PMO para a iniciativa Saudi Green (10 bilhões de árvores)",
+  "project_client13": "NCVC / DORNIER",
+
+  "project_title14": "Serviços operacionais para criação do departamento HSE",
+  "project_client14": "NCVC / DORNIER",
+
+  "project_title15": "Apoio técnico e administrativo no combate à desertificação e seca",
+  "project_client15": "NCVC / DORNIER",
+
+  "project_title16": "Sistema de inspeção pré-licenciamento – Riad",
+  "project_client16": "REMAT Riyadh / APPLUS",
+
+  "project_title17": "Estudo de oportunidades de investimento – África do Sul e SADC",
+  "project_client17": "DBSA / BMI Research",
+
+  "project_title18": "Sistema de garantia da qualidade para limpeza urbana",
+  "project_client18": "Ministério dos Assuntos Municipais / APPLUS",
+
+  "project_title19": "Estudo de localização de estação de tratamento de esgoto – Brasil",
+  "project_client19": "Harald Industria e Comercio de Alimentos",
+
+  "project_title20": "Estudo regulatório e de mercado para biometano e créditos de carbono",
+  "project_client20": "SUMITOMO Corporation",
+
+  "project_title21": "Estudo de viabilidade para produção de pellets de madeira – Amazônia",
+  "project_client21": "Serviço Florestal Brasileiro / ICMBio",
+
+  "project_title22": "Ampliação da capacidade de produção vegetal",
+  "project_client22": "Hailey Plant Tissue Culture Labs – Sri Lanka",
+
+  "project_title23": "Desenvolvimento de biorreator Plantform",
+  "project_client23": "Universidade Sueca de Ciências Agrárias",
+
+  "project_title24": "Serviços de assessoria técnica",
+  "project_client24": "Gadera Ltd & Fitzgerald Nurseries",
+
+  "project_title25": "Sistemas hidropônicos e aeropônicos para produção de mini-tubérculos",
+  "project_client25": "Gadera Ltd & Fitzgerald Nurseries",
+
+  "project_title26": "Projeto europeu de direitos de propriedade intelectual de plantas",
+  "project_client26": "Universidade de Sheffield",
+
+  "project_title27": "Desenvolvimento de protocolos para batata-doce",
+  "project_client27": "Fitzgerald Nurseries",
+  
     "contact_title": "Fale Conosco",
     "contact_label_fullname": "Nome completo *",
     "contact_label_email": "Email *",

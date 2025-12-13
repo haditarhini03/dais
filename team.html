@@ -333,7 +333,6 @@
         });
     </script>
     <script src="translations.js"></script>
-
 <script>
 // Load translations from translations.js
 let translations = window.translations || {};
@@ -364,6 +363,8 @@ function changeLanguage(lang) {
   localStorage.setItem("lang", lang);
   applyTranslations();
   highlightActiveLang();
+    location.reload();
+
 }
 
 // Highlight current language in header
@@ -413,10 +414,19 @@ window.onclick = e => {
     document.getElementById("team-modal").style.display = "none";
   }
 };
-
+function applyDirection() {
+  if (currentLang === "ar") {
+    document.documentElement.setAttribute("dir", "rtl");
+    document.body.classList.add("rtl");
+  } else {
+    document.documentElement.setAttribute("dir", "ltr");
+    document.body.classList.remove("rtl");
+  }
+}
 // ----------------------------
 // INITIAL LOAD
 // ----------------------------
+applyDirection();
 applyTranslations();
 highlightActiveLang();
 </script>
