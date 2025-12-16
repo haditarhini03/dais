@@ -275,7 +275,9 @@ window.translations ={
 "principles_sustainability_text": "We commit to responsible investment and development practices that prioritize long-term value for communities and the environment.",
 "principles_diversity_title": "Diversity:",
 "principles_diversity_text": "We embrace inclusive perspectives, empowering diverse leadership and ideas that strengthen outcomes.",
-
+"thankyou_title": "Thank you",
+"thankyou_message": "Your message has been sent successfully. We will get back to you shortly.",
+"thankyou_back": "Back to Home",
     "copyright": "© 2025 DAIS. All rights reserved. No part of this website or its content may be reproduced or used without prior written permission from DAIS"
 },
 
@@ -554,6 +556,9 @@ window.translations ={
     "principles_sustainability_text": "Nous nous engageons à des pratiques d'investissement et de développement responsables qui privilégient la valeur à long terme pour les communautés et l'environnement.",
     "principles_diversity_title": "Diversité :",
     "principles_diversity_text": "Nous adoptons des perspectives inclusives, renforçant le leadership diversifié et les idées qui améliorent les résultats.",
+"thankyou_title": "Merci",
+"thankyou_message": "Votre message a été envoyé avec succès. Nous vous répondrons prochainement.",
+"thankyou_back": "Retour à l’accueil",
 
     "copyright": "© 2025 DAIS. Tous droits réservés. Aucun contenu ne peut être reproduit sans autorisation préalable."
 },
@@ -832,6 +837,9 @@ window.translations ={
     "principles_sustainability_text": "نلتزم بممارسات استثمارية وتنموية مسؤولة تعطي قيمة طويلة الأمد للمجتمعات والبيئة.",
     "principles_diversity_title": "التنوع:",
     "principles_diversity_text": "نعتمد وجهات نظر شاملة، مما يعزز القيادة المتنوعة والأفكار التي تقوي النتائج.",
+"thankyou_title": "شكرًا لك",
+"thankyou_message": "تم إرسال رسالتك بنجاح. سنقوم بالرد عليك في أقرب وقت ممكن.",
+"thankyou_back": "العودة إلى الصفحة الرئيسية",
 
     "copyright": "© 2025 DAIS. جميع الحقوق محفوظة."
 },
@@ -1110,7 +1118,9 @@ window.translations ={
     "principles_sustainability_text": "Comprometemo-nos com práticas responsáveis de investimento e desenvolvimento que priorizam o valor a longo prazo para as comunidades e o meio ambiente.",
     "principles_diversity_title": "Diversidade:",
     "principles_diversity_text": "Adotamos perspectivas inclusivas, fortalecendo a liderança diversa e as ideias que aprimoram os resultados.",
-    
+    "thankyou_title": "Obrigado",
+    "thankyou_message": "Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.",
+    "thankyou_back": "Voltar para a página inicial",
     "copyright": "© 2025 DAIS. Todos os direitos reservados."
 }
 }
