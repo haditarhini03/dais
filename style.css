@@ -2480,7 +2480,7 @@ body.rtl .team-track {
 .about-hero h1,
 .about-hero p {
   color: white;
-  max-width: 550px;
+  max-width: 650px;
   margin-left: 80px;
   z-index: 2;
 }
@@ -2494,13 +2494,17 @@ body.rtl .team-track {
 
 .about-hero p {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1.1;
   margin-bottom: 20px;
   
 }
-
-
+body.rtl .about-hero h1{
+  font-size: 40px;
+}
+body.rtl .about-hero p{
+  font-size: 24px;
+}
 
 /*====================================
   RESPONSIVE
@@ -2597,18 +2601,18 @@ html[dir="rtl"] .about-hero p {
 
 .sector-row {
   display: flex;
-  align-items: center; /* centers image vertically with text */
+  align-items: flex-start; /* centers image vertically with text */
   gap: 25px;
 }
 
 .sector-icon-big {
   width: 80px;
   height: 80px;
+  align-self: center !important;
   object-fit: contain;
   margin: 0; /* remove the forced negative margin */
   flex-shrink: 0; /* prevents the icon from shrinking */
 }
-
 .sector-content h3 {
   color: #ff5c00;
   margin-bottom: 10px;

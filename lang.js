@@ -13,7 +13,7 @@ function applyTranslations() {
         el.innerHTML = translations[currentLang][key];
       }
     }
-  });
+  }); 
 
   // RTL for Arabic only
   if (currentLang === "ar") {
