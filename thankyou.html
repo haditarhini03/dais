@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="media/icon2.png" sizes="any" type="image/png">
   <title>Thank You</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
@@ -12,27 +14,19 @@
 
 <body class="thankyou-page">
 
-  <div class="thankyou-container">
+  <div class="thankyou-box">
     <h1 data-t="thankyou_title">Thank you</h1>
+
     <p data-t="thankyou_message">
       Your message has been sent successfully. We will get back to you shortly.
     </p>
 
-    <a href="index.html" class="dark" data-t="thankyou_back">
-      Back to Home
-    </a>
+    <a href="https://dais-global.com"><img src="media/daislogo.svg" alt="DAIS logo"></a>
   </div>
 
   <!-- Translations -->
   <script src="translations.js"></script>
   <script src="lang.js"></script>
-
-  <!-- Auto redirect -->
-  <script>
-    setTimeout(() => {
-      window.location.href = "index.html";
-    }, 6000);
-  </script>
 
 </body>
 </html>

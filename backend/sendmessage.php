@@ -1,19 +1,19 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-require __DIR__ . '/PHPMailer/src/Exception.php';
-require __DIR__ . '/PHPMailer/src/PHPMailer.php';
-require __DIR__ . '/PHPMailer/src/SMTP.php';
-
+// ----------------------
+// SECURITY HEADERS
+// ----------------------
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     exit("Method not allowed");
 }
 
-/* ----------------------
-   SANITIZE INPUT
----------------------- */
+// ----------------------
+// SANITIZE INPUT
+// ----------------------
 $fullName = trim($_POST['fullName'] ?? '');
 $email    = trim($_POST['email'] ?? '');
 $company  = trim($_POST['company'] ?? '');
@@ -23,57 +23,68 @@ $message  = trim($_POST['message'] ?? '');
 
 if (!$fullName || !$email || !$subject || !$message) {
     http_response_code(400);
-    exit("Missing required fields");
+    exit("Missing required fields.");
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
-    exit("Invalid email");
+    exit("Invalid email address.");
 }
 
-/* ----------------------
-   MAIL SETUP
----------------------- */
-$mail = new PHPMailer(true);
+// ----------------------
+// LOAD PEAR MAIL
+// ----------------------
+require_once "Mail.php";
 
-try {
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-
-    // 🔴 CHANGE THESE
-    $mail->Username   = 'htarhini@nuwavp.com';
-    $mail->Password   = 'YOUR_APP_PASSWORD';
-
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
-
-    $mail->CharSet = 'UTF-8';
-    $mail->SMTPDebug = 0;
-
-    $mail->setFrom('htarhini@nuwavp.com', 'DAIS Website');
-    $mail->addAddress('htarhini@nuwavp.com');
-    $mail->addReplyTo($email, $fullName);
-
-    $mail->isHTML(false);
-    $mail->Subject = "New Contact Form Message: " . strip_tags($subject);
-
-    $mail->Body =
-        "You received a new message from the website contact form:\n\n" .
-        "Full Name: $fullName\n" .
-        "Email: $email\n" .
-        "Company: $company\n" .
-        "Phone: $phone\n\n" .
-        "Message:\n$message\n";
-
-    $mail->send();
-
-    echo "OK";
-    exit;
-
-} catch (Exception $e) {
-    error_log("Mailer Error: " . $mail->ErrorInfo);
+if (!class_exists('Mail')) {
     http_response_code(500);
-    echo "Message could not be sent";
-    exit;
+    exit("PEAR Mail not available on server.");
 }
+
+// ----------------------
+// SMTP CONFIG (GMAIL)
+// ----------------------
+$smtpHost = "ssl://smtp.gmail.com";
+$smtpPort = 465;
+
+// CHANGE THESE 👇
+$smtpUser = "htarhini@nuwavp.com";
+$smtpPass = "qhxa rlkm yymc kkld"; // Gmail App Password
+
+$headers = [
+    "From"      => "DAIS Website <{$smtpUser}>",
+    "To"        => "info@dais-global.com",
+    "Subject"   => "New Contact Form Message: {$subject}",
+    "Reply-To"  => "{$fullName} <{$email}>",
+    "Content-Type" => "text/plain; charset=UTF-8"
+];
+
+$body =
+"You received a new message from the website contact form:\n\n" .
+"Full Name: {$fullName}\n" .
+"Email: {$email}\n" .
+"Company: {$company}\n" .
+"Phone: {$phone}\n\n" .
+"Message:\n{$message}\n";
+
+// ----------------------
+// SEND MAIL
+// ----------------------
+$mail = Mail::factory("smtp", [
+    "host"     => $smtpHost,
+    "port"     => $smtpPort,
+    "auth"     => true,
+    "username" => $smtpUser,
+    "password" => $smtpPass
+]);
+
+$result = $mail->send("info@dais-global.com", $headers, $body);
+
+if (PEAR::isError($result)) {
+    error_log("Mail error: " . $result->getMessage());
+    http_response_code(500);
+    exit("Message could not be sent.");
+}
+
+echo "OK";
+exit;

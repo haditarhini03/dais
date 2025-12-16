@@ -16,6 +16,44 @@ h1, h2{
 p, li, a, span, div, label, button, input , select, textarea {
     font-family: 'Cambria Math', sans-serif;
 }
+/* Spinner button */
+#sendBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Spinner hidden by default */
+.btn-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  display: none;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Loading state */
+#sendBtn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+#sendBtn.loading .btn-text {
+  display: none;
+}
+
+#sendBtn.loading .btn-spinner {
+  display: inline-block;
+}
+
 body.rtl {
   text-align: right !important;
 }
@@ -3325,5 +3363,67 @@ width: 570px;
 
   .contact-container {
     padding: 18px;
+  }
+}
+/* =========================
+   THANK YOU PAGE
+========================= */
+
+.thankyou-page {
+  min-height: 100vh;
+  background: white; /* black around */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Orange centered box */
+.thankyou-box {
+  background: var(--orange);
+  max-width: 520px;
+  width: 100%;
+  padding: 50px 40px 0px 40px ;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.thankyou-box img {
+  width: 80%;
+  text-align: center;
+  
+}
+/* Title */
+.thankyou-box h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Message */
+.thankyou-box p {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+  .thankyou-box {
+    padding: 40px 25px;
+  }
+
+  .thankyou-box h1 {
+    font-size: 28px;
+  }
+
+  .thankyou-box p {
+    font-size: 16px;
   }
 }
