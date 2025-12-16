@@ -200,85 +200,92 @@
         </div>
 
     </section>
-                <footer class="footer">
-            <img src="media/footer.png" class="footer-background">
+    <div id="newsletter-popup" class="popup-overlay" >
+        <div class="popup-box">
+            <button type="button" class="popup-close" aria-label="Close">&times;</button>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <img src="media/footer.png" class="footer-background">
 
-            <div class="footer-top">
-                <div class="footer-info">
-                    <a href="index.html"><img src="media/daislogo.svg" class="logo"></a>
-                </div>
-
-                <div class="footer-locations">
-
-                    <div class="location-col">
-                        <h3 data-t="footer_contact_us">Contact Us</h3>
-                        <p>
-                            <a href="mailto:info@dais-global.com">E : info@dais-global.com</a><br>
-                            <a href="http://www.dais-global.com">w : www.dais-global.com</a>
-                        </p>
-                    </div>
-
-                    <!-- LOCATION COLUMNS (unchanged text) -->
-                    <div class="location-col">
-                        <h3>DAIS Energy & Environment Ltd</h3>
-                        <p>
-                            69 Trinity Street, Dublin 2<br>
-                            D02 EY47, Dublin, Ireland<br>
-                            P : +353 (1 ) 209 19 16
-                        </p>
-                        <h3>DAIS SAS</h3>
-                        <p>
-                            60, Rue Francois 1<sup>er</sup> <br>
-                            75008<br>
-                            Paris, France<br>
-                            P : +33 ( 6 ) 70443869
-                        </p>
-                    </div>
-
-                    <div class="location-col">
-                        <h3>DAIS Brazil Ltd</h3>
-                        <p>
-                            Rua Dr. Paulo Tinoco Cabral,<br>
-                            613, Suite 14 , Ribeirão Preto<br>
-                            São Paulo, Brazil<br>
-                            P : +55 ( 16 ) 3237 2212
-                        </p>
-                        <h3>WTEEC Engineering Ltd</h3>
-                        <p>
-                            Rua Bandeira Paulista, 600<br>
-                            Itaim Bibi, São Paulo (SP)<br>
-                            P : +55 11 3705 6015
-                        </p>
-                    </div>
-
-                    <div class="location-col">
-                        <h3>DAIS Global SAL</h3>
-                        <p>
-                            Level 2 , Louis Vuitton Building<br>
-                            Suite 2029 , Allenby Street<br>
-                            Beirut, Lebanon<br>
-                            P : +961 ( 1 ) 95 76 37
-                        </p>
-                        <h3>TC Propagation LTD</h3>
-                        <p>
-                            Park Bree, Enniscorthy<br>
-                            Y21 P 8 X 9<br>
-                            Wexford, Ireland<br>
-                            P : +353 873113811
-                        </p>
-                    </div>
-
-                </div>
+        <div class="footer-top">
+            <div class="footer-info">
+                <a href="index.html"><img src="media/daislogo.svg" class="logo"></a>
             </div>
 
-            <div class="newsletter">
-                <div class="newsletter-left">
-                    <p data-t="newsletter_title">Sign up to our newsletter</p>
+            <div class="footer-locations">
 
-                    <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
-                        <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
-                        <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
-                    </form>
+                <div class="location-col">
+                    <h3 data-t="footer_contact_us">Contact Us</h3>
+                    <p>
+                        <a href="mailto:info@dais-global.com">E : info@dais-global.com</a><br>
+                        <a href="http://www.dais-global.com">w : www.dais-global.com</a>
+                    </p>
+                </div>
+
+                <!-- LOCATION COLUMNS (unchanged text) -->
+                <div class="location-col">
+                    <h3>DAIS Energy & Environment Ltd</h3>
+                    <p>
+                        69 Trinity Street, Dublin 2<br>
+                        D02 EY47, Dublin, Ireland<br>
+                        P : +353 (1 ) 209 19 16
+                    </p>
+                    <h3>DAIS SAS</h3>
+                    <p>
+                        60, Rue Francois 1<sup>er</sup> <br>
+                        75008<br>
+                        Paris, France<br>
+                        P : +33 ( 6 ) 70443869
+                    </p>
+                </div>
+
+                <div class="location-col">
+                    <h3>DAIS Brazil Ltd</h3>
+                    <p>
+                        Rua Dr. Paulo Tinoco Cabral,<br>
+                        613, Suite 14 , Ribeirão Preto<br>
+                        São Paulo, Brazil<br>
+                        P : +55 ( 16 ) 3237 2212
+                    </p>
+                    <h3>WTEEC Engineering Ltd</h3>
+                    <p>
+                        Rua Bandeira Paulista, 600<br>
+                        Itaim Bibi, São Paulo (SP)<br>
+                        P : +55 11 3705 6015
+                    </p>
+                </div>
+
+                <div class="location-col">
+                    <h3>DAIS Global SAL</h3>
+                    <p>
+                        Level 2 , Louis Vuitton Building<br>
+                        Suite 2029 , Allenby Street<br>
+                        Beirut, Lebanon<br>
+                        P : +961 ( 1 ) 95 76 37
+                    </p>
+                    <h3>TC Propagation LTD</h3>
+                    <p>
+                        Park Bree, Enniscorthy<br>
+                        Y21 P 8 X 9<br>
+                        Wexford, Ireland<br>
+                        P : +353 873113811
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <div class="newsletter-left">
+                <p data-t="newsletter_title">Sign up to our newsletter</p>
+
+                <form id="newsletterForm" class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                    <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
+                    <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
+                </form>
+
                 </div>
 
                 <div class="newsletter-socials">
@@ -430,7 +437,67 @@ applyDirection();
 applyTranslations();
 highlightActiveLang();
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("newsletterForm");
+  const popup = document.getElementById("newsletter-popup");
+  const popupMsg = document.getElementById("popup-message");
+  const popupClose = document.querySelector(".popup-close");
 
+  if (!form) {
+    console.error("newsletterForm id is missing");
+    return;
+  }
+
+  let timer = null;
+
+  function showPopup(message) {
+    popupMsg.textContent = message;
+    popup.style.display = "flex";
+
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      popup.style.display = "none";
+    }, 5000);
+  }
+
+  popupClose.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+      });
+
+      const status = (await res.text()).trim();
+
+      if (status === "OK") {
+        showPopup("Thank you for subscribing to our newsletter.");
+        form.reset();
+      } else if (status === "EXISTS") {
+        showPopup("You are already subscribed to our newsletter.");
+      } else if (status === "INVALID") {
+        showPopup("Please enter a valid email address.");
+      } else {
+        showPopup("Something went wrong. Please try again.");
+        console.log("Unexpected response:", status);
+      }
+    } catch (err) {
+      showPopup("Network error. Please try again.");
+      console.error(err);
+    }
+  });
+});
+</script>
 <!-- Load this BEFORE the script above -->
 </body>
 </html>

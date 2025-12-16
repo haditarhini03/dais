@@ -3427,3 +3427,49 @@ width: 570px;
     font-size: 16px;
   }
 }
+/* =========================
+   NEWSLETTER POPUP MODAL
+========================= */
+.popup-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+
+  background: rgba(0, 0, 0, 0.55) !important;
+
+  display: none;                 /* hidden by default */
+  justify-content: center !important;
+  align-items: center !important;
+
+  z-index: 999999 !important;
+}
+
+.popup-box {
+  background: var(--orange);
+  color: white;
+
+  padding: 30px 40px;
+  max-width: 420px;
+  width: 90%;
+
+  text-align: center;
+  border-radius: 8px;
+
+  position: relative;
+  font-size: 18px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+
+  background: none;
+  border: none;
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+}

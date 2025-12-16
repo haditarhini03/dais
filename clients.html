@@ -228,6 +228,12 @@
             </div>
         </div> 
     </section>
+    <div id="newsletter-popup" class="popup-overlay" >
+        <div class="popup-box">
+            <button type="button" class="popup-close" aria-label="Close">&times;</button>
+            <p id="popup-message"></p>
+        </div>
+    </div>
     <footer class="footer">
         <img src="media/footer.png" class="footer-background">
 
@@ -303,11 +309,12 @@
             <div class="newsletter-left">
                 <p data-t="newsletter_title">Sign up to our newsletter</p>
 
-                <form class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
+                <form id="newsletterForm" class="newsletter-form" action="backend/subscribe_newsletter.php" method="POST">
                     <input type="email" name="email" placeholder="Your email" data-t="newsletter_placeholder" required>
                     <button type="submit" class="dark" data-t="newsletter_btn">Sign Up</button>
                 </form>
-            </div>
+
+                </div>
 
             <div class="newsletter-socials">
                     <a href="https://www.linkedin.com/company/daisglobal/" target="_blank">
@@ -362,7 +369,67 @@
             }
         });
     </script>
-    
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("newsletterForm");
+  const popup = document.getElementById("newsletter-popup");
+  const popupMsg = document.getElementById("popup-message");
+  const popupClose = document.querySelector(".popup-close");
+
+  if (!form) {
+    console.error("newsletterForm id is missing");
+    return;
+  }
+
+  let timer = null;
+
+  function showPopup(message) {
+    popupMsg.textContent = message;
+    popup.style.display = "flex";
+
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => {
+      popup.style.display = "none";
+    }, 5000);
+  }
+
+  popupClose.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+      });
+
+      const status = (await res.text()).trim();
+
+      if (status === "OK") {
+        showPopup("Thank you for subscribing to our newsletter.");
+        form.reset();
+      } else if (status === "EXISTS") {
+        showPopup("You are already subscribed to our newsletter.");
+      } else if (status === "INVALID") {
+        showPopup("Please enter a valid email address.");
+      } else {
+        showPopup("Something went wrong. Please try again.");
+        console.log("Unexpected response:", status);
+      }
+    } catch (err) {
+      showPopup("Network error. Please try again.");
+      console.error(err);
+    }
+  });
+});
+</script>
     <script src="translations.js"></script>
     <script src="lang.js"></script>
 </body>

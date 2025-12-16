@@ -289,6 +289,8 @@ window.translations ={
 "thankyou_title": "Thank you",
 "thankyou_message": "Your message has been sent successfully. We will get back to you shortly.",
 "thankyou_back": "Back to Home",
+"newsletter_thankyou_title": "Thank you",
+ " newsletter_thankyou_message": "You have successfully subscribed to our newsletter.",
     "copyright": "© 2025 DAIS. All rights reserved. No part of this website or its content may be reproduced or used without prior written permission from DAIS"
 },
 
@@ -579,9 +581,11 @@ window.translations ={
     "principles_sustainability_text": "Nous nous engageons à des pratiques d'investissement et de développement responsables qui privilégient la valeur à long terme pour les communautés et l'environnement.",
     "principles_diversity_title": "Diversité :",
     "principles_diversity_text": "Nous adoptons des perspectives inclusives, renforçant le leadership diversifié et les idées qui améliorent les résultats.",
-"thankyou_title": "Merci",
-"thankyou_message": "Votre message a été envoyé avec succès. Nous vous répondrons prochainement.",
-"thankyou_back": "Retour à l’accueil",
+    "thankyou_title": "Merci",
+    "thankyou_message": "Votre message a été envoyé avec succès. Nous vous répondrons prochainement.",
+    "newsletter_thankyou_title": "Merci",
+    "newsletter_thankyou_message": "Votre inscription à la newsletter a été effectuée avec succès.",
+    "thankyou_back": "Retour à l’accueil",
 
     "copyright": "© 2025 DAIS. Tous droits réservés. Aucun contenu ne peut être reproduit sans autorisation préalable."
 },
@@ -875,7 +879,8 @@ window.translations ={
 "thankyou_title": "شكرًا لك",
 "thankyou_message": "تم إرسال رسالتك بنجاح. سنقوم بالرد عليك في أقرب وقت ممكن.",
 "thankyou_back": "العودة إلى الصفحة الرئيسية",
-
+  "newsletter_thankyou_title": "شكرًا لك",
+  "newsletter_thankyou_message": "تم الاشتراك في النشرة الإخبارية بنجاح.",
     "copyright": "© 2025 DAIS. جميع الحقوق محفوظة."
 },
 
@@ -1168,6 +1173,8 @@ window.translations ={
     "thankyou_title": "Obrigado",
     "thankyou_message": "Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.",
     "thankyou_back": "Voltar para a página inicial",
+    "newsletter_thankyou_title": "Obrigado",
+  "newsletter_thankyou_message": "Você se inscreveu com sucesso na nossa newsletter.",
     "copyright": "© 2025 DAIS. Todos os direitos reservados."
 }
 }
